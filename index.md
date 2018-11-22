@@ -68,7 +68,7 @@ In short SpinW can solve the following spin Hamiltonian using classical and quas
 
 $$\mathcal{H}=\sum_{i,j}\mathbf{S}_iJ_{ij}\mathbf{S}_j + \sum_i \mathbf{S}_iA_i\mathbf{S}_i + \mathbf{B}\sum_i\mathbf{g}_i\mathbf{S}_i$$
 
-where <latex>S_i</latex> are spin vector operators, <latex>J_{ij}</latex> are 3x3 matrices describing pair coupling between spins, <latex>A_{ij}</latex> are 3x3 anisotropy matrices, <latex>B</latex> is external magnetic field and <latex>g_i</latex> is the g-tensor.
+where $S_i$ are spin vector operators, $J_{ij}$ are 3x3 matrices describing pair coupling between spins, $A_{ij}$ are 3x3 anisotropy matrices, $B$ is external magnetic field and $g_i$ is the g-tensor.
 
 ### Crystal structures
 
@@ -113,4 +113,4 @@ where <latex>S_i</latex> are spin vector operators, <latex>J_{ij}</latex> are 3x
 
 Feel free to ask questions & requests!
 
-<img class='none' src="%ATTACHURLPATH%/hzb_logo.gif" alt="Helmholtz-Zentrum Berlin" width='228' /><img class='none' src="%ATTACHURLPATH%/nbia_logo.png" alt="Niels Bohr International Academy" width='250' /><img class='none' src="%ATTACHURLPATH%/logo_isis.png" alt="ISIS, Science & Technology Facilities Council" width='280' />
+<img class='none' src="img/hzb_logo.gif" alt="Helmholtz-Zentrum Berlin" width='228' /><img class='none' src="img/nbia_logo.png" alt="Niels Bohr International Academy" width='250' /><img class='none' src="img/isis_logo.png" alt="ISIS, Science & Technology Facilities Council" width='280' />

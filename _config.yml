@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (https://username.github.io) then use these settings:
-url: "https://spinw.github.io/spinw"
+url: "https://spinw.github.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -37,11 +37,11 @@ navbar-links:
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "https://github.com/SpinW/spinw/raw/master/spinw3_logo_square.png"
+#avatar: "img/spinw3_logo_square.png"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-# title-img: /path/to/image
+title-img: "img/spinw3_logo.png"
 
 # --- Background colour/image options --- #
 

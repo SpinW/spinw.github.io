@@ -1,17 +1,17 @@
 ---
 ---
 
-# SpinW
-
 *SpinW* is a MATLAB library that can plot and numerically simulate magnetic structures and excitations of given spin Hamiltonian using classical Monte Carlo simulation and linear spin wave theory.
 
-## Source code is on GitHub
+<h1 class="text-center">The Projects</h1>
+
+<div class="spacer"></div>
 
 <div class="row text-center">
   <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
     <div class="project-card">
       {%- assign gh-user = "spinw"-%}
-      {%- assign gh-project = "spinw" -%}
+      {%- assign gh-project = "SpinW" -%}
       <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" class="project-link" title="Go to Github Poject Page">
         <span class="fa-stack fa-4x">
           <i class="fas fa-square fa-stack-2x stack-color"></i>
@@ -105,7 +105,7 @@ where $S_i$ are spin vector operators, $J_{ij}$ are 3x3 matrices describing pair
 ### Plotting of spin wave spectrum
    * plotting of dispersions and correlation functions
    * calculation and plotting of the convoluted spectra for direct comparison with inelastic neutron scattering
-   * full integration into Horace for plotting and comparison with time of flight neutron data, see http://horace.isis.rl.ac.uk
+   * full integration into Horace for plotting and comparison with time of flight neutron data, see [http://horace.isis.rl.ac.uk][http://horace.isis.rl.ac.uk]
 
 ## Fitting spin wave spectra
    * possible to fit any parameter in the Hamiltonian
@@ -113,4 +113,9 @@ where $S_i$ are spin vector operators, $J_{ij}$ are 3x3 matrices describing pair
 
 Feel free to ask questions & requests!
 
-<img class='none' src="img/hzb_logo.gif" alt="Helmholtz-Zentrum Berlin" width='228' /><img class='none' src="img/nbia_logo.png" alt="Niels Bohr International Academy" width='250' /><img class='none' src="img/isis_logo.png" alt="ISIS, Science & Technology Facilities Council" width='280' />
+<img class='none' src="img/ess_logo.gif" alt="European Spallation Source" width='250' />
+<img class='none' src="img/psi_logo.gif" alt="Paul Scherrer Institut" width='250' />
+<img class='none' src="img/isis_logo.png" alt="ISIS, Science & Technology Facilities Council" width='250' />
+<img class='none' src="img/hzb_logo.gif" alt="Helmholtz-Zentrum Berlin" width='250' />
+<img class='none' src="img/nbia_logo.png" alt="Niels Bohr International Academy" width='250' />
+

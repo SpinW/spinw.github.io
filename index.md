@@ -14,8 +14,8 @@
       {%- assign gh-project = "spinw" -%}
       <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" class="project-link" title="Go to Github Poject Page">
         <span class="fa-stack fa-4x">
-          <i class="fa fa-square fa-stack-2x stack-color"></i>
-          <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+          <i class="fas fa-square fa-stack-2x stack-color"></i>
+          <i class="fas fa-code fa-stack-1x fa-inverse"></i>
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">
@@ -32,7 +32,7 @@
       <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" class="project-link" title="Go to Github Poject Page">
         <span class="fa-stack fa-4x">
           <i class="fa fa-square fa-stack-2x stack-color"></i>
-          <i class="fa fa-file-code-o fa-stack-1x fa-inverse"></i>
+          <i class="fa fa-python fa-stack-1x fa-inverse"></i>
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">
@@ -49,7 +49,7 @@
       <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" class="project-link" title="Go to Github Poject Page">
         <span class="fa-stack fa-4x">
           <i class="fa fa-square fa-stack-2x stack-color"></i>
-          <i class="fa fa-user-secret fa-stack-1x fa-inverse"></i>
+          <i class="fa fa-desktop fa-stack-1x fa-inverse"></i>
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">
@@ -66,12 +66,7 @@
 
 In short SpinW can solve the following spin Hamiltonian using classical and quasi classical numerical methods:
 
-<br>
-<p style="text-align:center">
-<latex title="spin Hamiltonian">
-\mathcal{H}=\sum_{i,j}\mathbf{S}_iJ_{ij}\mathbf{S}_j + \sum_i \mathbf{S}_iA_i\mathbf{S}_i + \mathbf{B}\sum_i\mathbf{g}_i\mathbf{S}_i
-</latex>
-</p>
+$$\mathcal{H}=\sum_{i,j}\mathbf{S}_iJ_{ij}\mathbf{S}_j + \sum_i \mathbf{S}_iA_i\mathbf{S}_i + \mathbf{B}\sum_i\mathbf{g}_i\mathbf{S}_i$$
 
 where <latex>S_i</latex> are spin vector operators, <latex>J_{ij}</latex> are 3x3 matrices describing pair coupling between spins, <latex>A_{ij}</latex> are 3x3 anisotropy matrices, <latex>B</latex> is external magnetic field and <latex>g_i</latex> is the g-tensor.
 

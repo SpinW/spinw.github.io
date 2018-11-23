@@ -1,4 +1,5 @@
 ---
+use_math: true
 ---
 
 *SpinW* is a MATLAB library that can plot and numerically simulate magnetic structures and excitations of given spin Hamiltonian using classical Monte Carlo simulation and linear spin wave theory.
@@ -65,11 +66,10 @@
 ## Features:
 
 In short SpinW can solve the following spin Hamiltonian using classical and quasi classical numerical methods:
-`
-\begin{aligned}
-    \mathcal{H}=\sum_{i,j}\mathbf{S}_iJ_{ij}\mathbf{S}_j + \sum_i \mathbf{S}_iA_i\mathbf{S}_i + \mathbf{B}\sum_i\mathbf{g}_i\mathbf{S}_i$$
-\end{aligned}    
-`
+
+$$
+    \mathcal{H}=\sum_{i,j}\mathbf{S}_iJ_{ij}\mathbf{S}_j + \sum_i \mathbf{S}_iA_i\mathbf{S}_i + \mathbf{B}\sum_i\mathbf{g}_i\mathbf{S}_i
+$$
 
 where $S_i$ are spin vector operators, $J_{ij}$ are 3x3 matrices describing pair coupling between spins, $A_{ij}$ are 3x3 anisotropy matrices, $B$ is external magnetic field and $g_i$ is the g-tensor.
 

@@ -122,7 +122,7 @@ Feel free to ask questions & requests!
 
 <div class="container" style="justify-content:space-around">
   <div class="row">
-    <div class="col-sm">
+    <div class="col-1-2">
         <div class="row">
             <img class='none' src="img/ess_logo.png" alt="European Spallation Source" width='250'/>
         </div>
@@ -133,7 +133,7 @@ Feel free to ask questions & requests!
             <img class='none' src="img/nbia_logo.png" alt="Niels Bohr International Academy" width='250'/>
         </div>  
     </div>
-    <div class="col-sm">
+    <div class="col-1-2">
         <div class="row">
             <img class='none' src="img/psi_logo.png" alt="Paul Scherrer Institut" width='250' />
         </div>

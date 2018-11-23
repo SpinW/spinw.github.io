@@ -108,7 +108,7 @@ where $S_i$ are spin vector operators, $J_{ij}$ are 3x3 matrices describing pair
 ### Plotting of spin wave spectrum
    * plotting of dispersions and correlation functions
    * calculation and plotting of the convoluted spectra for direct comparison with inelastic neutron scattering
-   * full integration into Horace for plotting and comparison with time of flight neutron data, see [http://horace.isis.rl.ac.uk][http://horace.isis.rl.ac.uk]
+   * full integration into Horace for plotting and comparison with time of flight neutron data, see [http://horace.isis.rl.ac.uk](http://horace.isis.rl.ac.uk)
 
 ## Fitting spin wave spectra
    * possible to fit any parameter in the Hamiltonian

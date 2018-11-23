@@ -57,7 +57,7 @@ use_math: true
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">
-        <p class="text-muted">SpinW written in C++</p>
+        <p class="text-muted">SpinW written in C++ for speed</p>
         <hr class="seperator">
         <img src="https://img.shields.io/github/forks/{{- gh-user -}}/{{- gh-project -}}.svg?style=social&label=Fork" alt="Github" title="Github Forks">
         <img src="https://img.shields.io/github/stars/{{- gh-user -}}/{{- gh-project -}}.svg?style=social&label=Stars" alt="Github" title="Github Stars">
@@ -119,30 +119,24 @@ where $S_i$ are spin vector operators, $J_{ij}$ are 3x3 matrices describing pair
 
 Feel free to ask questions & requests!
 
-
-<div class="container" style="justify-content:space-around">
-  <div class="row">
-    <div class="col-1-2">
-        <div class="row">
-            <img class='none' src="img/ess_logo.png" alt="European Spallation Source" width='250'/>
-        </div>
-        <div class="row">
-            <img class='none' src="img/isis_logo.png" alt="ISIS, Science & Technology Facilities Council" width='250'/>
-        </div>
-        <div class="row">
-            <img class='none' src="img/nbia_logo.png" alt="Niels Bohr International Academy" width='250'/>
-        </div>  
+<div class="wrapper">
+    <div>
+        <img class='none' src="img/ess_logo.png" alt="European Spallation Source" width='250'/>
     </div>
-    <div class="col-1-2">
-        <div class="row">
-            <img class='none' src="img/psi_logo.png" alt="Paul Scherrer Institut" width='250' />
-        </div>
-        <div class="row">
-            <img class='none' src="img/hzb_logo.gif" alt="Helmholtz-Zentrum Berlin" width='250' />
-        </div>
-        <div class="row">
-        </div>
+    <div>
+        <img class='none' src="img/isis_logo.png" alt="ISIS, Science & Technology Facilities Council" width='250'/>
     </div>
-  </div>
-</div>
-
+    <div>
+        <img class='none' src="img/nbia_logo.png" alt="Niels Bohr International Academy" width='250'/>
+    </div> 
+    <div>
+        <img class='none' src="img/psi_logo.png" alt="Paul Scherrer Institut" width='250' />
+    </div>
+    <div>
+        <img class='none' src="img/hzb_logo.gif" alt="Helmholtz-Zentrum Berlin" width='250' />
+    </div>
+</div>.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+}

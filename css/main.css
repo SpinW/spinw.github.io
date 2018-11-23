@@ -785,3 +785,12 @@ td.gutter {
   font-style: italic;
   font-size: 16px;
 }
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 1em;
+  text-align: center;
+}

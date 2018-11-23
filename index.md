@@ -113,13 +113,12 @@ where $S_i$ are spin vector operators, $J_{ij}$ are 3x3 matrices describing pair
    * calculation and plotting of the convoluted spectra for direct comparison with inelastic neutron scattering
    * full integration into Horace for plotting and comparison with time of flight neutron data, see [http://horace.isis.rl.ac.uk](http://horace.isis.rl.ac.uk)
 
-<h2 class="text-center">Fitting spin wave spectra</h2>
+### Fitting spin wave spectra
    * possible to fit any parameter in the Hamiltonian
    * robust fitting, even when the number of simulated spin wave modes differs from the measured number of modes
 
-Feel free to ask questions & requests!
-
-<h2 class="text-center">Our Partners</h2>
+<h1 class="text-center">Our Partners</h1>
+<div class="spacer"></div>
 
 <div class="wrapper">
     <div>

@@ -124,21 +124,21 @@ Feel free to ask questions & requests!
   <div class="row">
     <div class="col-sm">
         <div class="row">
-            <img class='none' src="img/ess_logo.png" alt="European Spallation Source" width=250px/>
+            <img class='none' src="img/ess_logo.png" alt="European Spallation Source" width='250'/>
         </div>
         <div class="row">
-            <img class='none' src="img/isis_logo.png" alt="ISIS, Science & Technology Facilities Council" width=250px/>
+            <img class='none' src="img/isis_logo.png" alt="ISIS, Science & Technology Facilities Council" width='250'/>
         </div>
         <div class="row">
-            <img class='none' src="img/nbia_logo.png" alt="Niels Bohr International Academy" width=250px/>
+            <img class='none' src="img/nbia_logo.png" alt="Niels Bohr International Academy" width='250'/>
         </div>  
     </div>
     <div class="col-sm">
         <div class="row">
-            <img class='none' src="img/psi_logo.png" alt="Paul Scherrer Institut" width=250px />
+            <img class='none' src="img/psi_logo.png" alt="Paul Scherrer Institut" width='250' />
         </div>
         <div class="row">
-            <img class='none' src="img/hzb_logo.gif" alt="Helmholtz-Zentrum Berlin" width=250px />
+            <img class='none' src="img/hzb_logo.gif" alt="Helmholtz-Zentrum Berlin" width='250' />
         </div>
         <div class="row">
         </div>

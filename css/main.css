@@ -8,7 +8,7 @@ layout: null
 code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit; color: inherit}
 
 body {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #404040;
   position: relative;
@@ -16,6 +16,8 @@ body {
   {% if site.page-img %}
   background-image: url({{ site.page-img }});
   background-attachment: fixed;
+  background-repeat: no-repeat;
+
   {% endif %}
 }
 p {

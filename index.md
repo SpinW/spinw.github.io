@@ -1,6 +1,9 @@
 ---
 use_math: true
 ---
+<div class="row text-center">
+<img src={{ site.page-img }} alt="SpinW Logo">
+</div>
 
 *SpinW* is a MATLAB library that can plot and numerically simulate magnetic structures and excitations of given spin Hamiltonian using classical Monte Carlo simulation and linear spin wave theory.
 
@@ -15,8 +18,8 @@ use_math: true
       {%- assign gh-project = "SpinW" -%}
       <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" class="project-link" title="Go to Github Poject Page">
         <span class="fa-stack fa-4x">
-          <i class="fa fa-square fa-stack-2x stack-color"></i>
-          <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+          <i class="fas fa-square fa-stack-2x stack-color"></i>
+          <i class="fas fa-code fa-stack-1x fa-inverse"></i>
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">
@@ -32,8 +35,8 @@ use_math: true
       {%- assign gh-project = "Models" -%}
       <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" class="project-link" title="Go to Github Poject Page">
         <span class="fa-stack fa-4x">
-          <i class="fa fa-square fa-stack-2x stack-color"></i>
-          <i class="fa fa-python fa-stack-1x fa-inverse"></i>
+          <i class="fas fa-square fa-stack-2x stack-color"></i>
+          <i class="fas fa-stroopwafel fa-stack-1x fa-inverse"></i>
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">
@@ -49,8 +52,8 @@ use_math: true
     {%- assign gh-project = "SpinWcore" -%}
       <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" class="project-link" title="Go to Github Poject Page">
         <span class="fa-stack fa-4x">
-          <i class="fa fa-square fa-stack-2x stack-color"></i>
-          <i class="fa fa-desktop fa-stack-1x fa-inverse"></i>
+          <i class="fas fa-square fa-stack-2x stack-color"></i>
+          <i class="fas fa-desktop fa-stack-1x fa-inverse"></i>
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">

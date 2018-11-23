@@ -790,7 +790,7 @@ td.gutter {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 10px;
+  column-gap: 5px;
   row-gap: 1em;
   text-align: center;
 }

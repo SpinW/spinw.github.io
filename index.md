@@ -135,8 +135,4 @@ Feel free to ask questions & requests!
     <div>
         <img class='none' src="img/hzb_logo.gif" alt="Helmholtz-Zentrum Berlin" width='250' />
     </div>
-</div>.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 200px;
-}
+</div>

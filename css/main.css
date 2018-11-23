@@ -5,6 +5,7 @@ layout: null
 @import url("pygment_highlights.css");
 
 /* --- General --- */
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit; color: inherit}
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;

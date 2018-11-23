@@ -2,7 +2,7 @@
 use_math: true
 ---
 <div class="row text-center">
-    <img src={{ site.page-img }} alt="SpinW Logo"></img>
+    <img src="{{ site.page-img }}" alt="SpinW Logo" style="width:65% !important" />
 </div>
 
 *SpinW* is a MATLAB library that can plot and numerically simulate magnetic structures and excitations of given spin Hamiltonian using classical Monte Carlo simulation and linear spin wave theory.

@@ -12,12 +12,12 @@ body {
   font-size: 18px;
   color: #404040;
   position: relative;
-  background-color: {{ site.page-col }};
   {% if site.page-img %}
   background-image: url({{ site.page-img }});
   background-attachment: fixed;
   background-repeat: no-repeat;
-
+  {% else %}
+  background-color: {{ site.page-col }};
   {% endif %}
 }
 p {
@@ -277,7 +277,7 @@ footer {
   font-size: 14px;
   background-color: {{ site.footer-col }};
   {% if site.footer-img %}
-  background-image: url({{ site.footer-img }});
+  background-image: url({{ site.footer-img }});Second
   background-attachment: fixed;
   {% endif %}
 }
@@ -794,3 +794,5 @@ td.gutter {
   row-gap: 1em;
   text-align: center;
 }
+
+/* Table of Contents */

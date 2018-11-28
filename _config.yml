@@ -23,14 +23,17 @@ description: "Official site of SpinW"
 
 # List of links in the navigation bar
 navbar-links:
-  News: "aboutme"
+  News: "news"
   Documentation:
-    - Installation: "http://deanattali.com/beautiful-jekyll/"
-    - SW Class: "http://www.markdowntutorial.com/"
-    - Class Properties: "https://pages.github.com/"
-    - Class Methods: "https://pages.github.com/"
-    - Keywords: "https://pages.github.com/"
-  Tutorials: "aboutme"
+    - Installation: "installation"
+    - SW Class: "SWclass"
+    - Class Properties: "SWproperties"
+    - Class Methods: "spinw"
+    - SW Files: "swfiles"
+    - SW Plot: "swplot"
+    - SW Pref: "swpref"
+    - SW Sym: "swsym"
+  Tutorials: "tutorials"
   Forum: "aboutme"
   F.A.Q: "aboutme"
   Pubilcations: "http://deanattali.com"
@@ -48,7 +51,7 @@ navbar-links:
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-title-img: "img/spinw3_header.png"
+title-img: "/img/spinw3_header.png"
 
 # --- Background colour/image options --- #
 
@@ -69,7 +72,7 @@ footer-link-col: "#404040"
 
 # navbar-img: "/img/bgimage.png"
 # footer-img: "/img/bgimage.png"
-page-img: "img/background.png"
+page-img: "/img/background.png"
 
 # --- Footer options --- #
 
@@ -165,6 +168,8 @@ paginate: 5
 
 kramdown:
   input: GFM
+  syntax_highlighter: rouge
+  parse_block_html: false
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
@@ -196,6 +201,8 @@ exclude:
   - LICENSE
   - README.md
   - Vagrantfile
+  - .idea/
+  - .gitignore
 
 # prose.io config
 prose:
@@ -256,6 +263,34 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
+
+collections_dir: pages
+collections:
+  spinw:
+    output: true
+    permalink: /:collection/:name
+  swfiles:
+    output: true
+    permalink: /:collection/:name
+  swfunc:
+    output: true
+    permalink: /:collection/:name
+  swplot:
+    output: true
+    permalink: /:collection/:name
+  swpref:
+    output: true
+    permalink: /:collection/:name
+  swsym:
+    output: true
+    permalink: /:collection/:name
+  ndbase:
+    output: true
+    permalink: /:collection/:name
+  tutorials:
+    output: true
+    layout: tutorial
+    permalink: /:collection/:name
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189

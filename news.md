@@ -1,11 +1,12 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: News
+subtitle: All the current SpinW news
 ---
 
 <div class="posts-list">
-  {% for post in paginator.posts %}
+  {% for post in site.posts %}
+  {% if post.categories contains "news" %}
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
 	  <h2 class="post-title">{{ post.title }}</h2>
@@ -52,6 +53,7 @@ subtitle: Why you'd want to go on a date with me
     {% endif %}
 
    </article>
+   {% endif %}
   {% endfor %}
 </div>
 

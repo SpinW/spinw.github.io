@@ -18,15 +18,15 @@ var main = {
     });
 
     // On mobile, hide the avatar when expanding the navbar menu
-    $('#main-navbar').on('show.bs.collapse', function () {
+    $('#_main-navbar').on('show.bs.collapse', function () {
       $(".navbar").addClass("top-nav-expanded");
     });
-    $('#main-navbar').on('hidden.bs.collapse', function () {
+    $('#_main-navbar').on('hidden.bs.collapse', function () {
       $(".navbar").removeClass("top-nav-expanded");
     });
 
     // On mobile, when clicking on a multi-level navbar menu, show the child links
-    $('#main-navbar').on("click", ".navlinks-parent", function(e) {
+    $('#_main-navbar').on("click", ".navlinks-parent", function(e) {
       var target = e.target;
       $.each($(".navlinks-parent"), function(key, value) {
         if (value == target) {
@@ -40,7 +40,7 @@ var main = {
     // Ensure nested navbar menus are not longer than the menu header
     var menus = $(".navlinks-container");
     if (menus.length > 0) {
-      var navbar = $("#main-navbar ul");
+      var navbar = $("#_main-navbar ul");
       var fakeMenuHtml = "<li class='fake-menu' style='display:none;'><a></a></li>";
       navbar.append(fakeMenuHtml);
       var fakeMenu = $(".fake-menu");

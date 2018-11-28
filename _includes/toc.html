@@ -1,0 +1,9 @@
+
+{% if page.toc %}
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#toc').toc({ {{ page.toc }} });
+  });
+  </script>
+{% endif %}

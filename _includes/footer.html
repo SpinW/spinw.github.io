@@ -16,7 +16,11 @@
             {%- endif -%}
                 <span class="fa-stack fa-lg" aria-hidden="true">
                   <i class="fas fa-circle fa-stack-2x"></i>
+                  {%- if curkey == 'rss' or curkey == 'email' -%}
+                  <i class="fas {{ element.icon }} fa-stack-1x fa-inverse"></i>
+                  {% else %}
                   <i class="fab {{ element.icon }} fa-stack-1x fa-inverse"></i>
+                  {% endif %}
                 </span>
                 <span class="sr-only">{{ element.name }}</span>
               </a>

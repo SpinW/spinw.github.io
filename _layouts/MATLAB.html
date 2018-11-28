@@ -1,0 +1,35 @@
+---
+layout: base
+---
+
+{% include header.html type="page" %}
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <literal>
+            <style type="text/css">
+                pre, tt, code { font-size:12px; }
+                pre.error { color:red; }
+                pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+                pre.codeoutput { padding:10px; border:1px solid #d3d3d3; background:#FFFFFF; }
+                pre.language-matlab { padding:5px; border:0px solid #d3d3d3; background:#FFFFFF; }
+                span.keyword { color:#0000FF }
+                span.comment { color:#228B22 }
+                span.string { color:#A020F0 }
+                span.untermstring { color:#B20000 }
+                span.syscmd { color:#B28C00 }
+            </style>
+        </literal>
+
+        {{ content }}
+
+        {% if page.comments %}
+        <div class="disqus-comments">
+	        {% include disqus.html %}
+        </div>
+	        {% include fb-comment.html %}
+	    {% endif %}
+    </div>
+  </div>
+</div>

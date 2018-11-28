@@ -1,6 +1,8 @@
 ---
+layout: page
 use_math: true
 ---
+
 <div class="row text-center">
     <img src="{{ site.title-img }}" alt="SpinW Logo" style="width:65% !important" />
 </div>

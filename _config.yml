@@ -37,6 +37,7 @@ navbar-links:
   Forum: "aboutme"
   F.A.Q: "aboutme"
   Pubilcations: "http://deanattali.com"
+  Presentations: "presentations"
 
 # --- Google custom search config --- #
 # search page name search -> /seach.md
@@ -90,7 +91,7 @@ social-network-links:
   email: "someone@spinw.org"
   #facebook: false
   github: spinw
-  twitter: spinw4
+  twitter: spinw4tutorial
 #  reddit: yourname
 #  google-plus: +DeanAttali
 #  linkedin: daattali
@@ -291,6 +292,30 @@ collections:
     output: true
     layout: tutorial
     permalink: /:collection/:name
+  presentations:
+    output: true
+    layout: reveal
+    permalink: /:collection/:name
+
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
+
+# Adding reveal.js support
+
+# Reveal.js subdirectory
+reveal_path: /reveal.js/
+# Additional reveal.js options
+reveal_options:
+# Path to the used theme (defaults to the Reveal.js standard theme path)
+reveal_theme_path: /reveal.js/css/theme/
+# Custom CSS for highlighting (defaults to reveal.js/lib/css/zenburn.css)
+highlight_style_sheet:
+# Additional reveal.js dependencies
+reveal_dependencies:
+# Embed Server-side speaker notes?
+reveal_notes_server: false
+# The Reveal transition
+reveal_transition: default
+# Additional custom CSS paths
+extra_css:

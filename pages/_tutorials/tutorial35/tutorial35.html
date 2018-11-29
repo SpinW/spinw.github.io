@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>tutorial35</title><meta name="generator" content="MATLAB 9.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-02-08"><meta name="DC.source" content="tutorial35.m"><style type="text/css">
+      --><title>Crystal structure of LuVO3</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-11-29"><meta name="DC.source" content="tutorial35.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Crystal structure of LuVO3</a></li><li><a href="#2">Generate Hamiltonian</a></li><li><a href="#3">Plot crystal structure with octahedral environment</a></li><li><a href="#4">Direct input of the magnetic structure</a></li><li><a href="#5">Check out matparser that can change the matrices in a spinw object</a></li><li><a href="#6">Fit experimental spin wave dispersion</a></li><li><a href="#7">Check the calculated spin wave spectrum</a></li></ul></div><h2 id="1">Crystal structure of LuVO3</h2><p>We generate crystal structure of LuVO3 including the non-magnetic atoms and using a non-standard space-group setting of Pnma.</p><pre class="codeinput">luvo = spinw;
+  </style></head><body><div class="content"><h1>Crystal structure of LuVO3</h1><!--introduction--><p>We generate crystal structure of LuVO3 including the non-magnetic atoms and using a non-standard space-group setting of Pnma.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Define the lattice</a></li><li><a href="#2">Generate Hamiltonian</a></li><li><a href="#3">Plot crystal structure with octahedral environment</a></li><li><a href="#4">Direct input of the magnetic structure</a></li><li><a href="#5">Check out matparser that can change the matrices in a spinw object</a></li><li><a href="#6">Fit experimental spin wave dispersion</a></li><li><a href="#7">Check the calculated spin wave spectrum</a></li></ul></div><h2 id="1">Define the lattice</h2><pre class="codeinput">luvo = spinw;
 luvo.genlattice(<span class="string">'lat_const'</span>,[5.2821 5.6144 7.5283],<span class="keyword">...</span>
     <span class="string">'spgr'</span>,<span class="string">'x+1/2,-y+1/2,-z; -x,-y,z+1/2; -x,-y,-z'</span>,<span class="string">'label'</span>,<span class="string">'P n m a'</span>)
 
@@ -80,7 +80,7 @@ luvo.addatom(<span class="string">'r'</span>,[0.082 0.487 1/4],<span class="stri
 luvo.addatom(<span class="string">'r'</span>,[0.223 0.216 0.534],<span class="string">'label'</span>,<span class="string">'O2 O2-'</span>,<span class="string">'color'</span>,[255 13 13])
 
 luvo.plot
-</pre><img vspace="5" hspace="5" src="tutorial35_01.png" style="width:560px;height:420px;" alt=""> <h2 id="2">Generate Hamiltonian</h2><p>We generate the spin Hamiltonian.</p><pre class="codeinput">luvo.gencoupling
+</pre><img vspace="5" hspace="5" src="tutorial35_01.png" alt=""> <img vspace="5" hspace="5" src="tutorial35_02.png" alt=""> <h2 id="2">Generate Hamiltonian</h2><p>We generate the spin Hamiltonian.</p><pre class="codeinput">luvo.gencoupling
 
 <span class="comment">% Parameters the describe the experimental data in the low T phase.</span>
 Jab   =  4.24;
@@ -101,21 +101,28 @@ luvo.addaniso(<span class="string">'K'</span>)
 R = sw_rotmatd([1 0 -0.2],-80);
 swplot.transform(R)
 swplot.translate
-</pre><img vspace="5" hspace="5" src="tutorial35_02.png" style="width:560px;height:420px;" alt=""> <h2 id="4">Direct input of the magnetic structure</h2><p>We input directly the antiferromagnetic structure.</p><pre class="codeinput">luvo.genmagstr(<span class="string">'mode'</span>,<span class="string">'helical'</span>,<span class="string">'S'</span>,[0 0 1]',<span class="string">'n'</span>,[0 1 0],<span class="string">'k'</span>,[0 1 1]);
+</pre><img vspace="5" hspace="5" src="tutorial35_03.png" alt=""> <h2 id="4">Direct input of the magnetic structure</h2><p>We input directly the antiferromagnetic structure.</p><pre class="codeinput">luvo.genmagstr(<span class="string">'mode'</span>,<span class="string">'helical'</span>,<span class="string">'S'</span>,[0 0 1]',<span class="string">'n'</span>,[0 1 0],<span class="string">'k'</span>,[0 1 1]);
 
 <span class="comment">% Overplot the magnetic structure without replotting the crystal</span>
 swplot.plotmag
-</pre><img vspace="5" hspace="5" src="tutorial35_03.png" style="width:560px;height:420px;" alt=""> <h2 id="5">Check out matparser that can change the matrices in a spinw object</h2><p>We will use the spinw.matparser mothod to parameterize the Hamiltonian. These will be out fitting parameters later. After calling matparser, we can check the resulting matrices using the spinw.table method.</p><pre class="codeinput">x1 = [4.24 5.95 -0.46 -0.48];
+</pre><img vspace="5" hspace="5" src="tutorial35_04.png" alt=""> <h2 id="5">Check out matparser that can change the matrices in a spinw object</h2><p>We will use the spinw.matparser mothod to parameterize the Hamiltonian. These will be out fitting parameters later. After calling matparser, we can check the resulting matrices using the spinw.table method.</p><pre class="codeinput">x1 = [4.24 5.95 -0.46 -0.48];
 luvo.matparser(<span class="string">'param'</span>,x1,<span class="string">'mat'</span>,{<span class="string">'Jab'</span> <span class="string">'Jc'</span> <span class="string">'K(2,2)'</span> <span class="string">'K(3,3)'</span>},<span class="string">'init'</span>,true)
 
 luvo.table(<span class="string">'matrix'</span>)
-</pre><pre class="codeoutput">ans = 
+</pre><pre class="codeoutput">
+ans =
+
+  3&times;6 table
+
     matrix             Mx                     My                     Mz                 type         assigned
     ______    ____________________    ___________________    ___________________    _____________    ________
+
     'Jab'     4.24       0       0    0     4.24        0    0        0     4.24    'Heisenberg'     'bond'  
     'Jc'      5.95       0       0    0     5.95        0    0        0     5.95    'Heisenberg'     'bond'  
     'K'          0       0       0    0    -0.46        0    0        0    -0.48    'anisotropic'    'aniso' 
-</pre><h2 id="6">Fit experimental spin wave dispersion</h2><p>We use the spinw.fitspec command to fit experimental data stored in the LuVO3_fitted_modes.txt' file. For details on the file format check sw_readspec, for details on the fitting check spinw.fitspec. To switch of the timer function we use the swpref.setpref command setting tid to 0. The fitspec command similarly to all other commands accept a struct instead of a list of optionname value pairs. We also slightly change the input of spinw.matparser, fitting K(1,1) and K(2,2) and restricting them to positive values. This ensures that the magnetic structure (parallel to c-axis) is always the right ground state. The data file is stored here: https://goo.gl/8guwPF Please save it with the name LuVO3_fitted_modes.txt into a location that is visible to Matlab.</p><pre class="codeinput">swpref.setpref(<span class="string">'tid'</span>,0)
+
+</pre><h2 id="6">Fit experimental spin wave dispersion</h2><p>We use the spinw.fitspec command to fit experimental data stored in the LuVO3_fitted_modes.txt' file. For details on the file format check sw_readspec, for details on the fitting check spinw.fitspec. To switch of the timer function we use the swpref.setpref command setting tid to 0. The fitspec command similarly to all other commands accept a struct instead of a list of optionname value pairs. We also slightly change the input of spinw.matparser, fitting K(1,1) and K(2,2) and restricting them to positive values. This ensures that the magnetic structure (parallel to c-axis) is always the right ground state. The data file is stored here: https://raw.githubusercontent.com/SpinW/spinw/master/tutorials/publish/LuVO3_fitted_modes.txt Please save it with the name LuVO3_fitted_modes.txt into a location that is visible to Matlab.</p><pre class="codeinput">perf = swpref;
+pref.tid = 0;
 
 par_fit          = struct;
 par_fit.datapath = <span class="string">'LuVO3_fitted_modes.txt'</span>;
@@ -140,7 +147,7 @@ Warning: Convergence is not reached!
 Warning: Convergence is not reached! 
 Warning: Convergence is not reached! 
 Warning: Convergence is not reached! 
-</pre><img vspace="5" hspace="5" src="tutorial35_04.png" style="width:560px;height:420px;" alt=""> <h2 id="7">Check the calculated spin wave spectrum</h2><p>After fitting, the best result is stored in the spinw object. The data includes 2 straight lines in reciprocal space: (0,1,L) and (0,1+K,3+K). We tile the two scans together onto the same plot using a bit of Matlab coding.</p><pre class="codeinput">Q1 = [0 1.0 2.0];
+</pre><img vspace="5" hspace="5" src="tutorial35_05.png" alt=""> <h2 id="7">Check the calculated spin wave spectrum</h2><p>After fitting, the best result is stored in the spinw object. The data includes 2 straight lines in reciprocal space: (0,1,L) and (0,1+K,3+K). We tile the two scans together onto the same plot using a bit of Matlab coding.</p><pre class="codeinput">Q1 = [0 1.0 2.0];
 Q2 = [0 1.0 3.0];
 Q3 = [0 1.5 3.5];
 
@@ -173,12 +180,13 @@ Qabs = [Qabs; Qabs2 + sqrt(sum(([0 0 1]*luvo.rl).^2))];
 hold <span class="string">on</span>
 plot3(Qabs,w1,1e2+w1*0,<span class="string">'ko'</span>,<span class="string">'MarkerFaceColor'</span>,<span class="string">'g'</span>)
 plot3(Qabs,w2,1e2+w2*0,<span class="string">'ko'</span>,<span class="string">'MarkerFaceColor'</span>,<span class="string">'g'</span>)
-</pre><img vspace="5" hspace="5" src="tutorial35_05.png" style="width:560px;height:420px;" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016b</a><br></p></div><!--
+</pre><img vspace="5" hspace="5" src="tutorial35_06.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Crystal structure of LuVO3
 % We generate crystal structure of LuVO3 including the non-magnetic atoms
 % and using a non-standard space-group setting of Pnma.
 
+%% Define the lattice
 luvo = spinw;
 luvo.genlattice('lat_const',[5.2821 5.6144 7.5283],...
     'spgr','x+1/2,-y+1/2,-z; -x,-y,z+1/2; -x,-y,-z','label','P n m a')
@@ -251,11 +259,11 @@ luvo.table('matrix')
 % input of spinw.matparser, fitting K(1,1) and K(2,2) and restricting them
 % to positive values. This ensures that the magnetic structure (parallel to
 % c-axis) is always the right ground state. The data file is stored here:
-% https://goo.gl/8guwPF
+% https://raw.githubusercontent.com/SpinW/spinw/master/tutorials/publish/LuVO3_fitted_modes.txt
 % Please save it with the name LuVO3_fitted_modes.txt into a location that
 % is visible to Matlab.
-
-swpref.setpref('tid',0)
+perf = swpref;
+pref.tid = 0;
 
 par_fit          = struct;
 par_fit.datapath = 'LuVO3_fitted_modes.txt';

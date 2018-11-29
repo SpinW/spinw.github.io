@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Description</title><meta name="generator" content="MATLAB 9.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-02-08"><meta name="DC.source" content="tutorial21.m"><style type="text/css">
+      --><title>Spin wave spectrum of YIG</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-11-29"><meta name="DC.source" content="tutorial21.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Description</h1><!--introduction--><p>This script calculates the low temperature spin dynamics of yttrium iron garnet (YIG) to compare with the recently published calculation of J. Baker and G. E. W. Bauer, <a href="http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.117.217201">PRL <b>117</b>, 217201 (2016)</a>. The published calculation is based on a classical spin dynamics described by the Landau-Lifshitz-Gilbert equation and a numerical integration in time. This method can be used to calculate spin dynamics at finite temperature. On the other hand SpinW can calculate the spin wave spectrum by diagonalizing the spin Hamiltonian that should be identical to the classical solution up to a finite zero point energy shift at low temperatures. Here we reproduce the low temperature spectrum to compare with the classical results of the paper.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Importing and plotting the YIG crystal</a></li><li><a href="#2">Show the primitive cell</a></li><li><a href="#3">Generate the bonds using centered cell</a></li><li><a href="#4">Create spin Hamiltonian</a></li><li><a href="#5">Spin wave dispersion to compare with the paper</a></li></ul></div><h2 id="1">Importing and plotting the YIG crystal</h2><p>We get the crystal structure of YIG from a .cif file stored online. SpinW is able to download the file from a given link and create the crystal structure.</p><pre class="codeinput">yig = spinw(<span class="string">'https://goo.gl/kQO0FJ'</span>);
+  </style></head><body><div class="content"><h1>Spin wave spectrum of YIG</h1><!--introduction--><p>This script calculates the low temperature spin dynamics of yttrium iron garnet (YIG) to compare with the recently published calculation of J. Baker and G. E. W. Bauer, <a href="http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.117.217201">PRL <b>117</b>, 217201 (2016)</a>. The published calculation is based on a classical spin dynamics described by the Landau-Lifshitz-Gilbert equation and a numerical integration in time. This method can be used to calculate spin dynamics at finite temperature. On the other hand SpinW can calculate the spin wave spectrum by diagonalizing the spin Hamiltonian that should be identical to the classical solution up to a finite zero point energy shift at low temperatures. Here we reproduce the low temperature spectrum to compare with the classical results of the paper.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Importing and plotting the YIG crystal</a></li><li><a href="#2">Show the primitive cell</a></li><li><a href="#3">Generate the bonds using centered cell</a></li><li><a href="#4">Create spin Hamiltonian</a></li><li><a href="#5">Spin wave dispersion to compare with the paper</a></li></ul></div><h2 id="1">Importing and plotting the YIG crystal</h2><p>We get the crystal structure of YIG from a .cif file stored online. SpinW is able to download the file from a given link and create the crystal structure.</p><pre class="codeinput">yig = spinw(<span class="string">'https://raw.githubusercontent.com/SpinW/Models/master/cif/YIG_10K.cif'</span>);
 
 <span class="comment">% The imported .cif file contains all symmetry operators of its space</span>
 <span class="comment">% group. SpinW will determine the generators of the space group and stores</span>
@@ -89,7 +89,7 @@ yig.unit_cell.S = yig.unit_cell.S/S0;
 hFig = plot(yig,<span class="string">'atomMode'</span>,<span class="string">'mag'</span>);
 swplot.plotchem(<span class="string">'atom1'</span>,<span class="string">'Fe1'</span>,<span class="string">'atom2'</span>,<span class="string">'O'</span>,<span class="string">'limit'</span>,6)
 swplot.plotchem(<span class="string">'atom1'</span>,<span class="string">'Fe2'</span>,<span class="string">'atom2'</span>,<span class="string">'O'</span>,<span class="string">'limit'</span>,4,<span class="string">'replace'</span>,false)
-</pre><img vspace="5" hspace="5" src="tutorial21_01.png" style="width:560px;height:420px;" alt=""> <h2 id="2">Show the primitive cell</h2><pre class="codeinput">plot(yig,<span class="string">'atomMode'</span>,<span class="string">'mag'</span>)
+</pre><img vspace="5" hspace="5" src="tutorial21_01.png" alt=""> <img vspace="5" hspace="5" src="tutorial21_02.png" alt=""> <h2 id="2">Show the primitive cell</h2><pre class="codeinput">plot(yig,<span class="string">'atomMode'</span>,<span class="string">'mag'</span>)
 
 <span class="comment">% new basis vectors in rows</span>
 pBV = [1/2 1/2 -1/2;-1/2 1/2 1/2;1/2 -1/2 1/2];
@@ -97,7 +97,7 @@ pBV = [1/2 1/2 -1/2;-1/2 1/2 1/2;1/2 -1/2 1/2];
 lat = yig.abc(1);
 
 swplot.plot(<span class="string">'type'</span>,<span class="string">'arrow'</span>,<span class="string">'position'</span>,cat(3,zeros(3),pBV'))
-</pre><img vspace="5" hspace="5" src="tutorial21_02.png" style="width:560px;height:420px;" alt=""> <h2 id="3">Generate the bonds using centered cell</h2><p>An interesting symmetry property of YIG in the "I a -3 d" space group is that the bonds type 3 and type 4 have the exact same length, however they are not related by symmetry. This can be easily seen by checking the center psition of the bonds:</p><pre class="codeinput">yig.gencoupling(<span class="string">'maxDistance'</span>,6);
+</pre><img vspace="5" hspace="5" src="tutorial21_03.png" alt=""> <h2 id="3">Generate the bonds using centered cell</h2><p>An interesting symmetry property of YIG in the "I a -3 d" space group is that the bonds type 3 and type 4 have the exact same length, however they are not related by symmetry. This can be easily seen by checking the center psition of the bonds:</p><pre class="codeinput">yig.gencoupling(<span class="string">'maxDistance'</span>,6);
 yig.getmatrix(<span class="string">'bond'</span>,3);
 yig.getmatrix(<span class="string">'bond'</span>,4);
 
@@ -105,33 +105,7 @@ yig.getmatrix(<span class="string">'bond'</span>,4);
 <span class="comment">% (7/8,7/8,7/8) position is 16b. Thus the exchange interactions on the two</span>
 <span class="comment">% bonds can be different, even though previous models of YIG assumed they</span>
 <span class="comment">% are equal.</span>
-</pre><pre class="codeoutput">
-The symmetry analysis of the coupling between atom 7 and atom 2:
- lattice translation vector: [-1,0,0]
- distance: 5.350 Angstrom
- center of bond (in lattice units): [0.875,0.625,0.375]
- allowed elements in the symmetric matrix:
-  S = | A|-B| B|
-      |-B| A|-B|
-      | B|-B| A|
-
- allowed components of the Dzyaloshinskii-Moriya vector:
-  D = [ D1,-D1,D1 ]
-
-
-The symmetry analysis of the coupling between atom 6 and atom 2:
- lattice translation vector: [0,-1,0]
- distance: 5.350 Angstrom
- center of bond (in lattice units): [0.625,0.875,0.375]
- allowed elements in the symmetric matrix:
-  S = | D                |-0.42421A+0.19428B|-0.42421A+0.19428B|
-      |-0.42421A+0.19428B| A+B              | C                |
-      |-0.42421A+0.19428B| C                | A+B              |
-
- allowed components of the Dzyaloshinskii-Moriya vector:
-  D = [ D1, D2,D2 ]
-
-</pre><h2 id="4">Create spin Hamiltonian</h2><p>change from BCC to primitive cubic cell</p><pre class="codeinput">T = yig.newcell({pBV(1,:) pBV(2,:) pBV(3,:)});
+</pre><h2 id="4">Create spin Hamiltonian</h2><p>change from BCC to primitive cubic cell</p><pre class="codeinput">T = yig.newcell(<span class="string">'bvect'</span>,{pBV(1,:) pBV(2,:) pBV(3,:)});
 
 <span class="comment">% exchange values from the paper</span>
 Jad = sw_converter(9.60e-21,<span class="string">'J'</span>,<span class="string">'THz'</span>,<span class="string">'photon'</span>);
@@ -154,7 +128,7 @@ yig.genmagstr(<span class="string">'mode'</span>,<span class="string">'rotate'</
 plot(yig,<span class="string">'atomMode'</span>,<span class="string">'mag'</span>,<span class="string">'atomLegend'</span>,false,<span class="string">'baseShift'</span>,[-5;-5;0])
 swplot.zoom(0.6)
 </pre><pre class="codeoutput">Warning: Convergence was not reached! 
-</pre><img vspace="5" hspace="5" src="tutorial21_03.png" style="width:560px;height:420px;" alt=""> <h2 id="5">Spin wave dispersion to compare with the paper</h2><p>To compare the results to the paper we extract the imaginary part of the spin-spin correlation function.</p><pre class="codeinput">Q0  = T*[1 2 3]';
+</pre><img vspace="5" hspace="5" src="tutorial21_04.png" alt=""> <h2 id="5">Spin wave dispersion to compare with the paper</h2><p>To compare the results to the paper we extract the imaginary part of the spin-spin correlation function.</p><pre class="codeinput">Q0  = T*[1 2 3]';
 Q_N = T*[ 1/2  1/2    0]'+Q0;
 Q_G = T*[   0    0    0]'+Q0;
 Q_H = T*[   0    0    1]'+Q0;
@@ -177,11 +151,11 @@ ylabel(<span class="string">'Energy (THz)'</span>)
 legend <span class="string">off</span>
 colorbar <span class="string">off</span>
 caxis([-0.05 0.05])
-</pre><img vspace="5" hspace="5" src="tutorial21_04.png" style="width:560px;height:420px;" alt=""> <pre>Written by
+</pre><img vspace="5" hspace="5" src="tutorial21_05.png" alt=""> <pre>Written by
 Sandor Toth
-06-Feb-2017</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016b</a><br></p></div><!--
+06-Feb-2017</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
-%% Description
+%% Spin wave spectrum of YIG
 % This script calculates the low temperature spin dynamics of yttrium iron
 % garnet (YIG) to compare with the recently published calculation of J.
 % Baker and G. E. W. Bauer,
@@ -199,8 +173,7 @@ Sandor Toth
 % We get the crystal structure of YIG from a .cif file stored online. SpinW
 % is able to download the file from a given link and create the crystal
 % structure.
-
-yig = spinw('https://goo.gl/kQO0FJ');
+yig = spinw('https://raw.githubusercontent.com/SpinW/Models/master/cif/YIG_10K.cif');
 
 % The imported .cif file contains all symmetry operators of its space
 % group. SpinW will determine the generators of the space group and stores
@@ -251,7 +224,7 @@ yig.getmatrix('bond',4);
 
 %% Create spin Hamiltonian
 % change from BCC to primitive cubic cell
-T = yig.newcell({pBV(1,:) pBV(2,:) pBV(3,:)});
+T = yig.newcell('bvect',{pBV(1,:) pBV(2,:) pBV(3,:)});
 
 % exchange values from the paper
 Jad = sw_converter(9.60e-21,'J','THz','photon');

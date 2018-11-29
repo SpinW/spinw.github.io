@@ -2,11 +2,11 @@
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
-      <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>tutorial2</title><meta content="MATLAB 9.1" name="generator"><link href="http://purl.org/dc/elements/1.1/" rel="schema.DC"><meta content="2017-02-08" name="DC.date"><meta content="tutorial2.m" name="DC.source"><style type="text/css">
+      --><title>Antiferromagnetic nearest-neighbour spin chain</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-11-29"><meta name="DC.source" content="tutorial2.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,18 +66,24 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Antiferromagnetic nearest-enighbor spin chain</a></li><li><a href="#2">Create antiferromagnetic interactions</a></li><li><a href="#3">Two ways of defining the magnetic structure</a></li><li><a href="#4">Define all spins</a></li><li><a href="#5">Define only one spin</a></li><li><a href="#6">Spin wave spectrum</a></li></ul></div><h2 id="1">Antiferromagnetic nearest-enighbor spin chain</h2><p>Definition of crystal structure, shortest bonds along the a-axis magnetic Cu+ atoms with S=1 spin.</p><pre class="codeinput">AFMchain = spinw;
+  </style></head><body><div class="content"><h1>Antiferromagnetic nearest-neighbour spin chain</h1><!--introduction--><p>Definition of crystal structure, shortest bonds along the a-axis magnetic Cu+ atoms with S=1 spin.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Define the lattice</a></li><li><a href="#2">Create antiferromagnetic interactions</a></li><li><a href="#3">Two ways of defining the magnetic structure</a></li><li><a href="#4">Define all spins</a></li><li><a href="#5">Define only one spin</a></li><li><a href="#6">Spin wave spectrum</a></li></ul></div><h2 id="1">Define the lattice</h2><pre class="codeinput">AFMchain = spinw;
 AFMchain.genlattice(<span class="string">'lat_const'</span>,[3 8 8],<span class="string">'angled'</span>,[90 90 90],<span class="string">'spgr'</span>,0);
 AFMchain.addatom(<span class="string">'r'</span>,[0 0 0],<span class="string">'S'</span>,1,<span class="string">'label'</span>,<span class="string">'MCu1'</span>,<span class="string">'color'</span>,<span class="string">'blue'</span>);
 disp(<span class="string">'Magnetic lattice:'</span>)
 AFMchain.table(<span class="string">'matom'</span>)
 plot(AFMchain,<span class="string">'range'</span>,[3 1 1])
 </pre><pre class="codeoutput">Magnetic lattice:
-ans = 
+
+ans =
+
+  1&times;4 table
+
     matom     idx    S        pos    
     ______    ___    _    ___________
-    'MCu1'    1      1    0    0    0
-</pre><img alt="" hspace="5" src="tutorial2_01.png" style="width:560px;height:420px;" vspace="5"> <h2 id="2">Create antiferromagnetic interactions</h2><p>Ja = 1 meV, positive sign denotes antiferromagnetic interaction.</p><pre class="codeinput">AFMchain.gencoupling(<span class="string">'maxDistance'</span>,7)
+
+    'MCu1'     1     1    0    0    0
+
+</pre><img vspace="5" hspace="5" src="tutorial2_01.png" alt=""> <img vspace="5" hspace="5" src="tutorial2_02.png" alt=""> <h2 id="2">Create antiferromagnetic interactions</h2><p>Ja = 1 meV, positive sign denotes antiferromagnetic interaction.</p><pre class="codeinput">AFMchain.gencoupling(<span class="string">'maxDistance'</span>,7)
 AFMchain.table(<span class="string">'bond'</span>,[1 2])
 
 AFMchain.addmatrix(<span class="string">'label'</span>,<span class="string">'Ja'</span>,<span class="string">'value'</span>,1,<span class="string">'color'</span>,<span class="string">'red'</span>);
@@ -85,18 +91,30 @@ AFMchain.addcoupling(<span class="string">'mat'</span>,<span class="string">'Ja'
 disp(<span class="string">'After assigning a matrix to a bond:'</span>)
 AFMchain.table(<span class="string">'bond'</span>,[1 2])
 plot(AFMchain,<span class="string">'range'</span>,[3 0.9 0.9])
-</pre><pre class="codeoutput">ans = 
-    bond        dl         length    matom1    idx1    matom2    idx2        matrix    
-    ____    ___________    ______    ______    ____    ______    ____    ______________
-    1       1    0    0    3         'MCu1'    1       'MCu1'    1       ''    ''    ''
-    2       2    0    0    6         'MCu1'    1       'MCu1'    1       ''    ''    ''
+</pre><pre class="codeoutput">
+ans =
+
+  2&times;10 table
+
+    idx    subidx        dl             dr         length    matom1    idx1    matom2    idx2        matrix    
+    ___    ______    ___________    ___________    ______    ______    ____    ______    ____    ______________
+
+     1       1       1    0    0    1    0    0      3       'MCu1'     1      'MCu1'     1      ''    ''    ''
+     2       1       2    0    0    2    0    0      6       'MCu1'     1      'MCu1'     1      ''    ''    ''
+
 After assigning a matrix to a bond:
-ans = 
-    bond        dl         length    matom1    idx1    matom2    idx2         matrix     
-    ____    ___________    ______    ______    ____    ______    ____    ________________
-    1       1    0    0    3         'MCu1'    1       'MCu1'    1       'Ja'    ''    ''
-    2       2    0    0    6         'MCu1'    1       'MCu1'    1       ''      ''    ''
-</pre><img alt="" hspace="5" src="tutorial2_02.png" style="width:560px;height:420px;" vspace="5"> <h2 id="3">Two ways of defining the magnetic structure</h2><h2 id="4">Define all spins</h2><p>We define a magnetic supercell 2x1x1 of the crystal cell and define both spin direction in the supercell with the following parameters:</p><div><ul><li>magnetic ordering wave vector k = (1/2 0 0)</li><li>spins pointing along +/- y direction: S = [[0 1 0]' [0 -1 0]']</li><li>normal to the spin vectors n = (1 0 0)</li></ul></div><pre class="codeinput">AFMchain.genmagstr(<span class="string">'mode'</span>,<span class="string">'direct'</span>,<span class="string">'k'</span>,[1/2 0 0],<span class="string">'n'</span>,[1 0 0],<span class="string">'S'</span>,[0 0; 1 -1;0 0],<span class="string">'nExt'</span>,[2 1 1]);
+
+ans =
+
+  2&times;10 table
+
+    idx    subidx        dl             dr         length    matom1    idx1    matom2    idx2         matrix     
+    ___    ______    ___________    ___________    ______    ______    ____    ______    ____    ________________
+
+     1       1       1    0    0    1    0    0      3       'MCu1'     1      'MCu1'     1      'Ja'    ''    ''
+     2       1       2    0    0    2    0    0      6       'MCu1'     1      'MCu1'     1      ''      ''    ''
+
+</pre><img vspace="5" hspace="5" src="tutorial2_03.png" alt=""> <h2 id="3">Two ways of defining the magnetic structure</h2><h2 id="4">Define all spins</h2><p>We define a magnetic supercell 2x1x1 of the crystal cell and define both spin direction in the supercell with the following parameters:</p><div><ul><li>magnetic ordering wave vector k = (1/2 0 0)</li><li>spins pointing along +/- y direction: S = [[0 1 0]' [0 -1 0]']</li><li>normal to the spin vectors n = (1 0 0)</li></ul></div><pre class="codeinput">AFMchain.genmagstr(<span class="string">'mode'</span>,<span class="string">'direct'</span>,<span class="string">'k'</span>,[1/2 0 0],<span class="string">'n'</span>,[1 0 0],<span class="string">'S'</span>,[0 0; 1 -1;0 0],<span class="string">'nExt'</span>,[2 1 1]);
 </pre><h2 id="5">Define only one spin</h2><p>We define the spin direction in the crystallographic unit cell and let the sw.genmagstr() function generate the other spin based on the magnetic ordering wave vector and normal vectors. This method is usefull for creating complex structures. Both methods gives the same magnetic structure, all stored values in the afchain.mag_str field are the same.</p><pre class="codeinput">AFMchain.genmagstr(<span class="string">'mode'</span>,<span class="string">'helical'</span>,<span class="string">'k'</span>,[1/2 0 0],<span class="string">'n'</span>,[1 0 0],<span class="string">'S'</span>,[0; 1; 0],<span class="string">'nExt'</span>,[2 1 1]);
 disp(<span class="string">'Magnetic structure:'</span>)
 AFMchain.table(<span class="string">'mag'</span>)
@@ -105,13 +123,19 @@ AFMchain.table(<span class="string">'mag'</span>)
 AFMchain.energy
 plot(AFMchain,<span class="string">'range'</span>,[3 0.9 0.9],<span class="string">'cellMode'</span>,<span class="string">'none'</span>,<span class="string">'baseMode'</span>,<span class="string">'none'</span>)
 </pre><pre class="codeoutput">Magnetic structure:
-ans = 
+
+ans =
+
+  2&times;8 table
+
     num    matom     idx    S      realFhat         imagFhat           pos              kvect      
     ___    ______    ___    _    _____________    _____________    ___________    _________________
-    1      'MCu1'    1      1    0     1     0    0     0     1    0    0    0    0.5      0      0
-    2      'MCu1'    1      1    0    -1     0    0     0    -1    1    0    0    0.5      0      0
+
+     1     'MCu1'     1     1    0     1     0    0     0     1    0    0    0    0.5      0      0
+     2     'MCu1'     1     1    0    -1     0    0     0    -1    1    0    0    0.5      0      0
+
 Ground state energy: -1.000 meV/spin.
-</pre><img alt="" hspace="5" src="tutorial2_03.png" style="width:560px;height:420px;" vspace="5"> <h2 id="6">Spin wave spectrum</h2><p>We calculate the spin wave spectrum and neutron scattering cross sections along the chain direction. The neutron scattering cross section is plotted together with the dispersion (black line).</p><pre class="codeinput">afcSpec = AFMchain.spinwave({[0 0 0] [1 0 0] 523}, <span class="string">'hermit'</span>,true);
+</pre><img vspace="5" hspace="5" src="tutorial2_04.png" alt=""> <h2 id="6">Spin wave spectrum</h2><p>We calculate the spin wave spectrum and neutron scattering cross sections along the chain direction. The neutron scattering cross section is plotted together with the dispersion (black line).</p><pre class="codeinput">afcSpec = AFMchain.spinwave({[0 0 0] [1 0 0] 523}, <span class="string">'hermit'</span>,true);
 figure
 subplot(2,1,1)
 sw_plotspec(afcSpec,<span class="string">'mode'</span>,4,<span class="string">'dE'</span>,0.2,<span class="string">'axLim'</span>,[0 3])
@@ -129,14 +153,15 @@ sw_plotspec(afcSpec,<span class="string">'mode'</span>,2,<span class="string">'l
 <span class="comment">% Position the figure on the screen, similarly how subplot() positions the</span>
 <span class="comment">% axes on the figure.</span>
 swplot.subfigure(1,3,1)
-</pre><img alt="" hspace="5" src="tutorial2_04.png" style="width:427px;height:700px;" vspace="5"> <pre>Written by
+</pre><img vspace="5" hspace="5" src="tutorial2_05.png" alt=""> <pre>Written by
 Bjorn Fak &amp; Sandor Toth
-06-Jun-2014, 06-Feb-2015</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016b</a><br></p></div><!--
+06-Jun-2014, 06-Feb-2015</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
-%% Antiferromagnetic nearest-enighbor spin chain
+%% Antiferromagnetic nearest-neighbour spin chain
 % Definition of crystal structure, shortest bonds along the a-axis magnetic
 % Cu+ atoms with S=1 spin.
 
+%% Define the lattice
 AFMchain = spinw; 
 AFMchain.genlattice('lat_const',[3 8 8],'angled',[90 90 90],'spgr',0);
 AFMchain.addatom('r',[0 0 0],'S',1,'label','MCu1','color','blue');

@@ -4,7 +4,11 @@ title: Tutorials
 subtitle: Current SpinW tutorials
 ---
 
-This is where you get to learn stuff!
+These tutorials can help to understand quickly how SpinW works. It is possible to download the Matlab code of any of the tutorials using the following Matlab command:
+
+`grabcode('http://www.spinw.org/tutorials/01tutorial')`
+
+where the link to the tutorial has to be pasted.
 
 {% for tutorial in site.tutorials %}
   <h2>

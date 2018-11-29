@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>tutorial6</title><meta name="generator" content="MATLAB 9.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-02-08"><meta name="DC.source" content="tutorial6.m"><style type="text/css">
+      --><title>Ferromagnetic kagome lattice</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-11-29"><meta name="DC.source" content="tutorial6.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Ferromagnetic kagome lattice</a></li><li><a href="#2">Define Hamiltonian</a></li><li><a href="#3">Magnetic structure</a></li><li><a href="#4">Spin wave dispersion</a></li><li><a href="#5">Powder averaged spectrum</a></li></ul></div><h2 id="1">Ferromagnetic kagome lattice</h2><p>We create the kagome lattice with up to 4th neighbor interactions. The symmetry related atoms are denoted by MCu1(i)_j, where i is the index of independent atomic positions, j is the index of the generated atomic positions of the i-th independent position.</p><pre class="codeinput">kagome4 = spinw;
+  </style></head><body><div class="content"><h1>Ferromagnetic kagome lattice</h1><!--introduction--><p>We create the kagome lattice with up to 4th neighbor interactions. The symmetry related atoms are denoted by MCu1(i)_j, where i is the index of independent atomic positions, j is the index of the generated atomic positions of the i-th independent position.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Define the lattice</a></li><li><a href="#2">Define Hamiltonian</a></li><li><a href="#3">Magnetic structure</a></li><li><a href="#4">Spin wave dispersion</a></li><li><a href="#5">Powder averaged spectrum</a></li></ul></div><h2 id="1">Define the lattice</h2><pre class="codeinput">kagome4 = spinw;
 kagome4.genlattice(<span class="string">'lat_const'</span>,[6 6 8],<span class="string">'angled'</span>,[90 90 120],<span class="string">'spgr'</span>,<span class="string">'P -3'</span>);
 kagome4.addatom(<span class="string">'r'</span>, [1/2 0 0],<span class="string">'S'</span>, 1,<span class="string">'label'</span>,<span class="string">'MCu1'</span>,<span class="string">'color'</span>,<span class="string">'r'</span>);
 disp(<span class="string">'Atomic positions:'</span>)
@@ -74,13 +74,19 @@ kagome4.table(<span class="string">'atom'</span>)
 plot(kagome4)
 swplot.zoom(1.5)
 </pre><pre class="codeoutput">Atomic positions:
-ans = 
+
+ans =
+
+  3&times;4 table
+
     matom     idx    S           pos       
     ______    ___    _    _________________
-    'MCu1'    1      1    0.5      0      0
-    'MCu1'    2      1      0    0.5      0
-    'MCu1'    3      1    0.5    0.5      0
-</pre><img vspace="5" hspace="5" src="tutorial6_01.png" style="width:560px;height:420px;" alt=""> <h2 id="2">Define Hamiltonian</h2><p>We add couplings up to 4th neighbor interactions. If the generation of the bond tables would depend on distance, J3a, J3b and J3c would be equivalent. However using the 'P -3' space group the three type of bonds are inequivalent, as physically expected in real systems (J3a goes through an intermediate magnetic atom, while the other two bonds are not).</p><pre class="codeinput">kagome4.gencoupling(<span class="string">'maxDistance'</span>,7);
+
+    'MCu1'     1     1    0.5      0      0
+    'MCu1'     2     1      0    0.5      0
+    'MCu1'     3     1    0.5    0.5      0
+
+</pre><img vspace="5" hspace="5" src="tutorial6_01.png" alt=""> <img vspace="5" hspace="5" src="tutorial6_02.png" alt=""> <h2 id="2">Define Hamiltonian</h2><p>We add couplings up to 4th neighbor interactions. If the generation of the bond tables would depend on distance, J3a, J3b and J3c would be equivalent. However using the 'P -3' space group the three type of bonds are inequivalent, as physically expected in real systems (J3a goes through an intermediate magnetic atom, while the other two bonds are not).</p><pre class="codeinput">kagome4.gencoupling(<span class="string">'maxDistance'</span>,7);
 disp(<span class="string">'Bonds:'</span>)
 kagome4.table(<span class="string">'bond'</span>,[])
 
@@ -100,58 +106,70 @@ kagome4.addcoupling(<span class="string">'mat'</span>,<span class="string">'J3c'
 <span class="comment">% when the matrix labels ends with a minus sign.</span>
 plot(kagome4,<span class="string">'range'</span>,[2 2 1],<span class="string">'bondMode'</span>,<span class="string">'line'</span>,<span class="string">'bondLineWidth0'</span>,2)
 </pre><pre class="codeoutput">Bonds:
-ans = 
-    bond          dl          length    matom1    idx1    matom2    idx2        matrix    
-    ____    ______________    ______    ______    ____    ______    ____    ______________
-    1        0     1     0        3     'MCu1'    3       'MCu1'    1       ''    ''    ''
-    1        0    -1     0        3     'MCu1'    1       'MCu1'    2       ''    ''    ''
-    1        0     0     0        3     'MCu1'    2       'MCu1'    3       ''    ''    ''
-    1        0     0     0        3     'MCu1'    3       'MCu1'    1       ''    ''    ''
-    1        1     0     0        3     'MCu1'    1       'MCu1'    2       ''    ''    ''
-    1       -1     0     0        3     'MCu1'    2       'MCu1'    3       ''    ''    ''
-    2        1    -1     0    5.196     'MCu1'    1       'MCu1'    2       ''    ''    ''
-    2        0     1     0    5.196     'MCu1'    2       'MCu1'    3       ''    ''    ''
-    2       -1     0     0    5.196     'MCu1'    3       'MCu1'    1       ''    ''    ''
-    2        0     0     0    5.196     'MCu1'    1       'MCu1'    2       ''    ''    ''
-    2       -1    -1     0    5.196     'MCu1'    2       'MCu1'    3       ''    ''    ''
-    2        1     1     0    5.196     'MCu1'    3       'MCu1'    1       ''    ''    ''
-    3        0     1     0        6     'MCu1'    1       'MCu1'    1       ''    ''    ''
-    3       -1    -1     0        6     'MCu1'    2       'MCu1'    2       ''    ''    ''
-    3        1     0     0        6     'MCu1'    3       'MCu1'    3       ''    ''    ''
-    4        0     1     0        6     'MCu1'    2       'MCu1'    2       ''    ''    ''
-    4       -1    -1     0        6     'MCu1'    3       'MCu1'    3       ''    ''    ''
-    4        1     0     0        6     'MCu1'    1       'MCu1'    1       ''    ''    ''
-    5        0     1     0        6     'MCu1'    3       'MCu1'    3       ''    ''    ''
-    5       -1    -1     0        6     'MCu1'    1       'MCu1'    1       ''    ''    ''
-    5        1     0     0        6     'MCu1'    2       'MCu1'    2       ''    ''    ''
-</pre><img vspace="5" hspace="5" src="tutorial6_02.png" style="width:560px;height:420px;" alt=""> <h2 id="3">Magnetic structure</h2><p>For strong FM 1str neighbour and weak further neighbor interaction the ground state is ferromagnetic.</p><pre class="codeinput">kagome4.genmagstr(<span class="string">'mode'</span>,<span class="string">'helical'</span>,<span class="string">'k'</span>,[0 0 0],<span class="string">'n'</span>,[0 1 0],<span class="string">'S'</span>,[0 1 0]');
+
+ans =
+
+  21&times;10 table
+
+    idx    subidx          dl                   dr             length    matom1    idx1    matom2    idx2        matrix    
+    ___    ______    ______________    ____________________    ______    ______    ____    ______    ____    ______________
+
+     1       1        0     1     0       0     0.5       0        3     'MCu1'     3      'MCu1'     1      ''    ''    ''
+     1       2        0    -1     0    -0.5    -0.5       0        3     'MCu1'     1      'MCu1'     2      ''    ''    ''
+     1       3        0     0     0     0.5       0       0        3     'MCu1'     2      'MCu1'     3      ''    ''    ''
+     1       4        0     0     0       0    -0.5       0        3     'MCu1'     3      'MCu1'     1      ''    ''    ''
+     1       5        1     0     0     0.5     0.5       0        3     'MCu1'     1      'MCu1'     2      ''    ''    ''
+     1       6       -1     0     0    -0.5       0       0        3     'MCu1'     2      'MCu1'     3      ''    ''    ''
+     2       1        1    -1     0     0.5    -0.5       0    5.196     'MCu1'     1      'MCu1'     2      ''    ''    ''
+     2       2        0     1     0     0.5       1       0    5.196     'MCu1'     2      'MCu1'     3      ''    ''    ''
+     2       3       -1     0     0      -1    -0.5       0    5.196     'MCu1'     3      'MCu1'     1      ''    ''    ''
+     2       4        0     0     0    -0.5     0.5       0    5.196     'MCu1'     1      'MCu1'     2      ''    ''    ''
+     2       5       -1    -1     0    -0.5      -1       0    5.196     'MCu1'     2      'MCu1'     3      ''    ''    ''
+     2       6        1     1     0       1     0.5       0    5.196     'MCu1'     3      'MCu1'     1      ''    ''    ''
+     3       1        0     1     0       0       1       0        6     'MCu1'     1      'MCu1'     1      ''    ''    ''
+     3       2       -1    -1     0      -1      -1       0        6     'MCu1'     2      'MCu1'     2      ''    ''    ''
+     3       3        1     0     0       1       0       0        6     'MCu1'     3      'MCu1'     3      ''    ''    ''
+     4       1        0     1     0       0       1       0        6     'MCu1'     2      'MCu1'     2      ''    ''    ''
+     4       2       -1    -1     0      -1      -1       0        6     'MCu1'     3      'MCu1'     3      ''    ''    ''
+     4       3        1     0     0       1       0       0        6     'MCu1'     1      'MCu1'     1      ''    ''    ''
+     5       1        0     1     0       0       1       0        6     'MCu1'     3      'MCu1'     3      ''    ''    ''
+     5       2       -1    -1     0      -1      -1       0        6     'MCu1'     1      'MCu1'     1      ''    ''    ''
+     5       3        1     0     0       1       0       0        6     'MCu1'     2      'MCu1'     2      ''    ''    ''
+
+</pre><img vspace="5" hspace="5" src="tutorial6_03.png" alt=""> <h2 id="3">Magnetic structure</h2><p>For strong FM 1str neighbour and weak further neighbor interaction the ground state is ferromagnetic.</p><pre class="codeinput">kagome4.genmagstr(<span class="string">'mode'</span>,<span class="string">'helical'</span>,<span class="string">'k'</span>,[0 0 0],<span class="string">'n'</span>,[0 1 0],<span class="string">'S'</span>,[0 1 0]');
 disp(<span class="string">'Magnetic structure:'</span>)
 kagome4.table(<span class="string">'mag'</span>)
 kagome4.energy
 plot(kagome4,<span class="string">'range'</span>,[2 2 1],<span class="string">'bondMode'</span>,<span class="string">'line'</span>,<span class="string">'bondLineWidth0'</span>,3,<span class="keyword">...</span>
     <span class="string">'bondZero'</span>,false)
 </pre><pre class="codeoutput">Magnetic structure:
-ans = 
+
+ans =
+
+  3&times;7 table
+
     num    matom     idx    S     realFhat             pos              kvect   
     ___    ______    ___    _    ___________    _________________    ___________
-    1      'MCu1'    1      1    0    1    0    0.5      0      0    0    0    0
-    2      'MCu1'    2      1    0    1    0      0    0.5      0    0    0    0
-    3      'MCu1'    3      1    0    1    0    0.5    0.5      0    0    0    0
+
+     1     'MCu1'     1     1    0    1    0    0.5      0      0    0    0    0
+     2     'MCu1'     2     1    0    1    0      0    0.5      0    0    0    0
+     3     'MCu1'     3     1    0    1    0    0.5    0.5      0    0    0    0
+
 Ground state energy: -1.630 meV/spin.
-</pre><img vspace="5" hspace="5" src="tutorial6_03.png" style="width:560px;height:420px;" alt=""> <h2 id="4">Spin wave dispersion</h2><pre class="codeinput">kag4Spec = kagome4.spinwave({[-1/2 0 0] [0 0 0] [1/2 1/2 0] 200});
+</pre><img vspace="5" hspace="5" src="tutorial6_04.png" alt=""> <h2 id="4">Spin wave dispersion</h2><pre class="codeinput">kag4Spec = kagome4.spinwave({[-1/2 0 0] [0 0 0] [1/2 1/2 0] 200});
 kag4Spec = sw_neutron(kag4Spec);
 kag4Spec = sw_egrid(kag4Spec,<span class="string">'Evect'</span>,linspace(0,6.5,100)) ;
 figure
 sw_plotspec(kag4Spec,<span class="string">'mode'</span>,1,<span class="string">'axLim'</span>,[0 8],<span class="string">'colorbar'</span>,false,<span class="string">'colormap'</span>,[0 0 0])
 </pre><pre class="codeoutput">Warning: To make the Hamiltonian positive definite, a small omega_tol value was
 added to its diagonal! 
-</pre><img vspace="5" hspace="5" src="tutorial6_04.png" style="width:560px;height:420px;" alt=""> <h2 id="5">Powder averaged spectrum</h2><pre class="codeinput">kag4Pow = kagome4.powspec(linspace(0,2.5,100),<span class="string">'Evect'</span>,linspace(0,7,250),<span class="keyword">...</span>
+</pre><img vspace="5" hspace="5" src="tutorial6_05.png" alt=""> <h2 id="5">Powder averaged spectrum</h2><pre class="codeinput">kag4Pow = kagome4.powspec(linspace(0,2.5,100),<span class="string">'Evect'</span>,linspace(0,7,250),<span class="keyword">...</span>
     <span class="string">'nRand'</span>,1e3,<span class="string">'hermit'</span>,false);
 figure
 sw_plotspec(kag4Pow,<span class="string">'axLim'</span>,[0 0.2],<span class="string">'colorbar'</span>,true)
-</pre><img vspace="5" hspace="5" src="tutorial6_05.png" style="width:560px;height:420px;" alt=""> <pre>Written by
+</pre><img vspace="5" hspace="5" src="tutorial6_06.png" alt=""> <pre>Written by
 Bjorn Fak &amp; Sandor Toth
-06-Jun-2014, 06-Feb-2017</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016b</a><br></p></div><!--
+06-Jun-2014, 06-Feb-2017</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Ferromagnetic kagome lattice
 % We create the kagome lattice with up to 4th neighbor interactions. The
@@ -159,6 +177,7 @@ Bjorn Fak &amp; Sandor Toth
 % independent atomic positions, j is the index of the generated atomic
 % positions of the i-th independent position.
 
+%% Define the lattice
 kagome4 = spinw;
 kagome4.genlattice('lat_const',[6 6 8],'angled',[90 90 120],'spgr','P -3');
 kagome4.addatom('r', [1/2 0 0],'S', 1,'label','MCu1','color','r');

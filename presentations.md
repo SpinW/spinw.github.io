@@ -5,7 +5,8 @@ subtitle: All the SpinW presentations
 ---
 
 This is where you get to see stuff!
-{% for presentation in site.presentations %}
+{% assign ordered_pages = site.presentations | sort:"name" %}
+{% for presentation in ordered_pages %}
   <h2>
   <a href="{{ presentation.outerURL | prepend: site.baseurl }}" target="_blank"> {{ presentation.title }} </a>
   </h2>

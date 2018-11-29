@@ -80,9 +80,9 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 	    {% endif %}
     </div>
   </div>
+    <div class="disqus-comments">
+        {% include disqus.html %}
+    </div>
+    {% include fb-comment.html %}
 </div>
 
-<div class="disqus-comments">
-    {% include disqus.html %}
-</div>
-{% include fb-comment.html %}

@@ -34,9 +34,9 @@ navbar-links:
     - SW Pref: "swpref"
     - SW Sym: "swsym"
   Tutorials: "tutorials"
-  Forum: "aboutme"
-  F.A.Q: "aboutme"
-  Pubilcations: "http://deanattali.com"
+  Forum: "https://github.com/SpinW/spinw/issues"
+  F.A.Q: "faq"
+  Pubilcations: "publications"
   Presentations: "presentations"
 
 # --- Google custom search config --- #
@@ -140,7 +140,7 @@ google_analytics: "UA-129339088-1"
 # --- Comments --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-# disqus: ""
+disqus: "spinworg"
 
 # To use Facebook Comments, fill in a Facebook App ID
 # fb_comment_id: ""

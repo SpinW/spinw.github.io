@@ -37,6 +37,7 @@ navbar-links:
   Forum: "aboutme"
   F.A.Q: "aboutme"
   Pubilcations: "http://deanattali.com"
+  Presentations: "presentations"
 
 # --- Google custom search config --- #
 # search page name search -> /seach.md
@@ -291,6 +292,8 @@ collections:
     output: true
     layout: tutorial
     permalink: /:collection/:name
-
+  presentations:
+    output: true
+    permalink: /:collection/:name
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189

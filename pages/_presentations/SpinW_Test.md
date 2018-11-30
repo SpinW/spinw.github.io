@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SpinW test
-outerURL: "/myplanet-revealjs"
+outerURL: "/BasicPresentation"
 ---
 
 This is a presentation given NEVER!

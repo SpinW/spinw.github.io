@@ -2,6 +2,7 @@
 layout: page
 title: Presentations
 subtitle: Presentations on SpinW
+note:   [](<a href="{{ presentation.outerURL | prepend: site.baseurl }}?print-pdf" > Download PDF </a>)
 ---
 
 This is where you get to learn SpinW!
@@ -11,5 +12,4 @@ This is where you get to learn SpinW!
   <a href="{{ presentation.outerURL | prepend: site.baseurl }}" target="_blank"> {{ presentation.title }} </a>
   </h2>
   <p>{{ presentation.content }}</p>
-  [](<a href="{{ presentation.outerURL | prepend: site.baseurl }}?print-pdf" > Download PDF </a>)
 {% endfor %}

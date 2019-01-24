@@ -4,7 +4,7 @@ title: Presentations
 subtitle: Presentations on SpinW
 note:   [](<a href="{{ presentation.outerURL | prepend: site.baseurl }}?print-pdf" > Download PDF </a>)
 ---
-
+<h1>Presentations on SpinW</h1>
 This is where you get to learn SpinW!
 {% assign ordered_pages = site.presentations | sort:"name" %}
 {% for presentation in ordered_pages %}

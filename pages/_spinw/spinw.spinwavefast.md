@@ -1,7 +1,7 @@
 ---
-{title: spinw.spinwave method, link: spinw.spinwave, summary: calculates spin correlation
-    function using linear spin wave theory, keywords: sample, sidebar: sw_sidebar,
-  permalink: spinw_spinwave, folder: spinw, mathjax: true}
+{title: spinw.spinwavefast method, link: spinw.spinwavefast, summary: calculates spin
+    correlation function using linear spin wave theory, keywords: sample, sidebar: sw_sidebar,
+  permalink: spinw_spinwavefast, folder: spinw, mathjax: true}
 
 ---
  
@@ -43,7 +43,7 @@ spec = tri.spinwave({[0 0 0] [1 1 0]})
 sw_plotspec(spec)
 ```
  
-{% include image.html file="generated/spinw_spi_1.png" alt="sw_plotspec(spec)" %}
+{% include image.html file="generated/spinw_spinwav_1.png" alt="sw_plotspec(spec)" %}
   
 ### Input Arguments
  
@@ -61,7 +61,7 @@ sw_plotspec(spec)
   For example to define a scan along $$(h,0,0)$$ from $$h=0$$ to $$h=1$$ using
   200 $$Q$$ points the following input should be used:
   ```matlab
-  Q = {[0 0 0] [1 0 0]  200}
+  Q = {[0 0 0] [1 0 0]  50}
   ```
  
   For symbolic calculation at a general reciprocal space point use `sym`
@@ -111,13 +111,8 @@ sw_plotspec(spec)
   the output spectrum won't contain the copy of `obj`), default is
   `false`.
  
-`'notwin'`
-: If `true`, the spectra of the twins won't be calculated. Default is
-`false`.
- 
 `'sortMode'`
-: If `true`, the spin wave modes will be sorted by continuity. Default is 
-  `true`.
+: If `true`, the spin wave modes will be sorted. Default is `true`.
  
 `'optmem'`
 : Parameter to optimise memory usage. The list of Q values will be cut
@@ -233,9 +228,9 @@ $$(Q-k_m,Q,Q+k_m)$$.
 If several twins exist in the sample, `omega` and `Sab` are packaged into
 a cell, that contains $$n_{twin}$$ number of matrices.
  
-### See Also
+### See also
  
-[spinw](spinw) \| [spinw.spinwavesym](spinw_spinwavesym) \| [sw_mex](sw_mex) \| [spinw.powspec](spinw_powspec) \| [sortmode]
+[spinw](spinw) \| [spinw.spinwavesym](spinw_spinwavesym) \| [sw_mex](sw_mex) \| [spinw.powspec](spinw_powspec)
  
 
 {% include links.html %}

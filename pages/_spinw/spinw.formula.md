@@ -17,20 +17,20 @@ of `obj`.
 ### Examples
  
 The formula of the crystal stored in the
-[https://goo.gl/do6oTh](https://goo.gl/do6oTh) linked file will be
+[https://raw.githubusercontent.com/SpinW/Models/master/cif/Ca2RuO4.cif](https://raw.githubusercontent.com/SpinW/Models/master/cif/Ca2RuO4.cif) linked file will be
 printed onto the Command Window.
  
 ```matlab
-cryst = spinw('https://goo.gl/do6oTh')
+cryst = spinw('https://raw.githubusercontent.com/SpinW/Models/master/cif/Ca2RuO4.cif')
 cryst.formula
 ```
 *Output*
 ```
-     Chemical formula:  Cr1Li1O2
-     Formula mass:        90.936 g/mol
-     Formula in cell:          3 units
-     Cell volume:        105.178 Å³
-     Density:              4.307 g/cm³
+     Chemical formula:  Ca2O4Ru1
+     Formula mass:       245.224 g/mol
+     Formula in cell:          4 units
+     Cell volume:        355.397 Å³
+     Density:              4.583 g/cm³
 ```
  
  

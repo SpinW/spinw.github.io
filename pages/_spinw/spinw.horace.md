@@ -102,6 +102,14 @@ plot(cut(d3dobj,[],[],[4 5]))
   * `fid` File ID provided by the `fopen` command, the output is written
           into the opened file stream.
  
+`'useFast'`
+: whether to use the spinw.spinwavefast method or not. This method 
+          is similar to spinw.spinwave but calculates only the unpolarised
+          neutron cross-section and ignores all negative energy branches
+          as well as using other shortcuts. In general it should produce
+          the same spectra as spinw.spinwave, with some rounding errors,
+          but can be 2-3 times faster and uses less memory.
+ 
 ### Output Arguments
   
 `w`

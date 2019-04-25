@@ -4,18 +4,21 @@
   folder: swpref, mathjax: true}
 
 ---
-    el = ADDLISTENER(hSource, 'Eventname', callbackFcn) creates a listener
+    el = ADDLISTENER(hSource, Eventname, callbackFcn) creates a listener
     for the event named Eventname.  The source of the event is the handle 
     object hSource.  If hSource is an array of source handles, the listener
     responds to the named event on any handle in the array.  callbackFcn
     is a function handle that is invoked when the event is triggered.
  
-    el = ADDLISTENER(hSource, PropName, 'Eventname', Callback) adds a 
-    listener for a property event.  Eventname must be one of the character
-    vectors 'PreGet', 'PostGet', 'PreSet', and 'PostSet'.  PropName must be 
-    a single property name or cell array of property names, or an array of   
-    one or more meta.property objects.  The properties must belong to the
-    class of hSource.  If hSource is scalar, PropName can include dynamic
+    el = ADDLISTENER(hSource, PropName, Eventname, Callback) adds a 
+    listener for a property event.  Eventname must be one of
+    'PreGet', 'PostGet', 'PreSet', or 'PostSet'. Eventname can be
+    a string scalar or character vector.  PropName must be a single 
+    property name specified as string scalar or character vector, or a 
+    collection of property names specified as a cell array of character 
+    vectors or a string array, or as an array of one or more 
+    meta.property objects.  The properties must belong to the class of 
+    hSource.  If hSource is scalar, PropName can include dynamic 
     properties.
     
     For all forms, addlistener returns an event.listener.  To remove a

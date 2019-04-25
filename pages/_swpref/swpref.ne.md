@@ -20,5 +20,7 @@
  
     See also SWPREF, SWPREF/EQ, SWPREF/GE, SWPREF/GT, SWPREF/LE, SWPREF/LT
 Help for swpref/ne is inherited from superclass HANDLE
+    Reference page in Doc Center
+       doc swpref/ne
 
 {% include links.html %}

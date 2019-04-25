@@ -17,6 +17,10 @@ files are compiled, use the `swpref.setpref('usemex',true)` command to
 switch on using mex files in [spinw.spinwave](spinw_spinwave).
   
 ### Name-Value Pair Arguments
+ 
+`'compile'`
+: If `false`, mex files will not be compiled. Default is
+  `true`.
   
 `'test'`
 : If `true`, the compiled .mex files will be tested. Default is

@@ -1,88 +1,39 @@
 ---
-{title: spinw.spinw method, link: spinw.spinw, summary: Operators and special characters.,
-  keywords: sample, sidebar: sw_sidebar, permalink: spinw_spinw, folder: spinw, mathjax: true}
+{title: spinw.spinw method, link: spinw.spinw, summary: spinw constructor, keywords: sample,
+  sidebar: sw_sidebar, permalink: spinw_spinw, folder: spinw, mathjax: true}
 
 ---
  
-Arithmetic operators.
-  plus       - Plus                               +    
-  uplus      - Unary plus                         +    
-  minus      - Minus                              -    
-  uminus     - Unary minus                        -    
-  mtimes     - Matrix multiply                    *    
-  times      - Array multiply                    .*    
-  mpower     - Matrix power                       ^    
-  power      - Array power                       .^    
-  mldivide   - Backslash or left matrix divide    \    
-  mrdivide   - Slash or right matrix divide       /    
-  ldivide    - Left array divide                 .\    
-  rdivide    - Right array divide                ./    
-  idivide    - Integer division with rounding option.
-  kron       - Kronecker tensor product   
+### Syntax
  
-Relational operators.
-  eq         - Equal                             ==     
-  ne         - Not equal                         ~=     
-  lt         - Less than                          <      
-  gt         - Greater than                       >      
-  le         - Less than or equal                <=     
-  ge         - Greater than or equal             >=     
+`obj = spinw`
  
-Logical operators.
-  relop      - Short-circuit logical AND         &&     
-  relop      - Short-circuit logical OR          ||     
-  and        - Element-wise logical AND           &      
-  or         - Element-wise logical OR            |      
-  not        - Logical NOT                        ~      
-  punct      - Ignore function argument or output ~
-  xor        - Logical EXCLUSIVE OR
-  any        - True if any element of vector is nonzero
-  all        - True if all elements of vector are nonzero
+`obj = spinw(struct)` 
  
-Special characters. 
-  colon      - Colon                              : 
-  paren      - Parentheses and subscripting      ( )              
-  paren      - Brackets                          [ ]     
-  paren      - Braces and subscripting           { }          
-  punct      - Function handle creation           @
-  punct      - Decimal point                      .      
-  punct      - Structure field access             .      
-  punct      - Parent directory                   ..     
-  punct      - Continuation                       ...    
-  punct      - Separator                          ,      
-  punct      - Semicolon                          ;      
-  punct      - Comment                            %      
-  punct      - Invoke operating system command    !            
-  punct      - Assignment                         =
-  punct      - Quote                              '      
-  punct      - Double quote                       "    
-  transpose  - Transpose                         .'
-  ctranspose - Complex conjugate transpose        ' 
-  horzcat    - Horizontal concatenation          [,]     
-  vertcat    - Vertical concatenation            [;]     
-  subsasgn   - Subscripted assignment          ( ),{ },.   
-  subsref    - Subscripted reference           ( ),{ },.   
-  numArgumentsFromSubscript - Number of arguments for indexing methods
-  subsindex  - Subscript index
-  metaclass  - Metaclass for MATLAB class         ?
+`obj = spinw(hFigure)`
  
-Bitwise operators.
-  bitand     - Bit-wise AND.
-  bitcmp     - Complement bits.
-  bitor      - Bit-wise OR.
-  bitxor     - Bit-wise XOR.
-  bitset     - Set bit.
-  bitget     - Get bit.
-  bitshift   - Bit-wise shift.
+`obj = spinw(fName)`
  
-Set operators.
-  union      - Set union.
-  unique     - Set unique.
-  intersect  - Set intersection.
-  setdiff    - Set difference.
-  setxor     - Set exclusive-or.
-  ismember   - True for set member.
+`obj = spinw(obj)`
  
-See also ARITH, RELOP, SLASH, FUNCTION_HANDLE.
+### Description
+ 
+`obj = spinw` creates an empty SpinW object with default
+values.
+ 
+`obj = spinw(struct)` creates a SpinW object from a structure
+which has fields that are compatible with the SpinW property
+structure.
+ 
+`obj = spinw(hFigure)` clones SpinW object from an swplot
+figure or spectral plot figure.
+ 
+`obj = spinw(fName)` imports the file referenced by `fName`.
+SpinW is able to import .cif/.fts files for crystal or
+magnetic structure from a local file or a web address.
+ 
+`obj = spinw(obj)` checks the input SpinW object for
+consistency.
+ 
 
 {% include links.html %}

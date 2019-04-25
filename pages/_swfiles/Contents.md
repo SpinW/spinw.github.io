@@ -72,7 +72,7 @@ calculate normal vector to a set of vector, etc.
 * [sw_nvect](sw_nvect) determines the best normal vector for the set of vectors
   sw_quadell  
 * [sw_mirror](sw_mirror) mirrors a 3D vector
-* [sw_rot](sw_rot) rotates vectorsin 3D
+* [sw_rot](sw_rot) rotates vectors in 3D
 * [sw_rotmat](sw_rotmat) generates 3D rotation matrix
 * [sw_rotmatd](sw_rotmatd) generates 3D rotation matrix
  

@@ -85,7 +85,7 @@ Helper function that can be also used as standalone.
  
 $$Name: SpinW$$ ($$Version: 3.1$$)
 $$Author: S. Tóth and S. Ward$$ ($$Contact: admin@spinw.org, @spinw4 on Twitter$$)
-$$Revision: 1590$$ ($$Date: 24-Apr-2019$$)
+$$Revision: 1591$$ ($$Date: 25-Apr-2019$$)
 $$License: GNU GENERAL PUBLIC LICENSE$$
 
 {% include links.html %}

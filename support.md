@@ -3,7 +3,7 @@
 If you are having problems with SpinW you can contact support by the webform or *support AT spinw DOT org*. This can get busy, so apologies for delays.
 
 If you have found a bug, documentation error or have a suggestion please use the [github issue tracker](https://github.com/SpinW/spinw/issues)
-
+<section>
 <form action="https://mailthis.to/spinw_sup" method="POST" encType="multipart/form-data">
     <!-- Name -->
     <input type="text" name="name" placeholder="Your name" required>
@@ -30,3 +30,4 @@ If you have found a bug, documentation error or have a suggestion please use the
           <!-- Submit Button -->
           <input type="submit" name="submit" value="Submit Form" class="button">
 </form>
+</section>

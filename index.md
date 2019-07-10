@@ -34,15 +34,15 @@ use_math: true
   </div>
   <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
     <div class="project-card">
-      {%- assign gh-project = "Models" -%}
+      {%- assign gh-project = "pySpinW" -%}
       <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" class="project-link" title="Go to Github Poject Page">
         <span class="fa-stack fa-4x">
           <i class="fas fa-square fa-stack-2x stack-color"></i>
-          <i class="fas fa-stroopwafel fa-stack-1x fa-inverse"></i>
+          <i class="fab fa-python fa-stack-1x fa-inverse"></i>
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">
-        <p class="text-muted">Model repository for SpinW</p>
+        <p class="text-muted">Python implementation of SpinW</p>
         <hr class="seperator">
         <img src="https://img.shields.io/github/forks/{{- gh-user -}}/{{- gh-project -}}.svg?style=social&label=Fork" alt="Github" title="Github Forks">
         <img src="https://img.shields.io/github/stars/{{- gh-user -}}/{{- gh-project -}}.svg?style=social&label=Stars" alt="Github" title="Github Stars">
@@ -59,7 +59,7 @@ use_math: true
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">
-        <p class="text-muted">SpinW written in C++ for speed</p>
+        <p class="text-muted">SpinW core functions written in C++ for speed</p>
         <hr class="seperator">
         <img src="https://img.shields.io/github/forks/{{- gh-user -}}/{{- gh-project -}}.svg?style=social&label=Fork" alt="Github" title="Github Forks">
         <img src="https://img.shields.io/github/stars/{{- gh-user -}}/{{- gh-project -}}.svg?style=social&label=Stars" alt="Github" title="Github Stars">

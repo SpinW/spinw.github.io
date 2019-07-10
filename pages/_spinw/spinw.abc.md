@@ -1,14 +1,8 @@
 ---
-title: spinw.abc method
-link: spinw.abc
-summary: returns lattice parameters and angles
-keywords: sample
-sidebar: sw_sidebar
-permalink: spinw_abc
-folder: spinw
-mathjax: true
-categories: spinw
-tags: method_doc
+{title: spinw.abc method, link: spinw.abc, summary: returns lattice parameters and
+    angles, keywords: sample, sidebar: sw_sidebar, permalink: spinw_abc, folder: spinw,
+  mathjax: true}
+
 ---
   
 ### Syntax

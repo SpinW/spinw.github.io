@@ -3,7 +3,7 @@ title: SpinW class properties
 use_math: true
 toc: "headers: 'h2'"
 ---
-The sw object properties store all the information necessary for the spin wave calculation. It has 8 fields with several subfields, see below.
+The spinw object properties store all the information necessary for the spin wave calculation. It has 8 fields with several subfields, see below.
 
 <div id="toc"></div>
 

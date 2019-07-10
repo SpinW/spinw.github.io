@@ -30,6 +30,10 @@ the interactive Command Line provided by the function.
   `installDir` is `'.'`, the update will be installed to current
   folder.
   
+`'beta'`
+: Retrieve the latest pre-release if it is newer than the latest release.
+  If it is older, download the latest release.
+ 
 ### Output Arguments
   
 `onlineVer`  If output is defined, the revision number of the online

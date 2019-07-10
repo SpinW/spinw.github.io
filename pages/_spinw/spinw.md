@@ -157,7 +157,7 @@ of public methods is below.
 * [spinw.version](spinw_version) returns the version of SpinW
 * [spinw.struct](spinw_struct) converts properties into struct
 * [spinw.clearcache](spinw_clearcache) clears the cache
-* [spinw.spinw](spinw_spinw) Operators and special characters.
+* [spinw.spinw](spinw_spinw) spinw constructor
  
 ### See also
  

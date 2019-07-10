@@ -75,8 +75,8 @@ points.
   `'auto'`.
   
 `'sortMode'`
-: Sorting the modes before plotting. Default is `false`. Can improve the
-  quality of the dispersion line plots if modes are crossing.
+: Sorting the modes by energy before plotting. Default is `false`. Can 
+  improve the quality of the dispersion line plots if modes are crossing.
   
 `'axLim'`
 : Upper limit for energy axis (for `mode` 1,2) or color axis (for `mode`

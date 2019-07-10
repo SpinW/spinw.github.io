@@ -17,5 +17,7 @@
  
     See also SWPREF, SWPREF/EQ, SWPREF/GE, SWPREF/LE, SWPREF/LT, SWPREF/NE
 Help for swpref/gt is inherited from superclass HANDLE
+    Reference page in Doc Center
+       doc swpref/gt
 
 {% include links.html %}

@@ -4,22 +4,22 @@
   mathjax: true}
 
 ---
-  
+ 
 ### Syntax
-  
+ 
 `E = energy(obj,Name,Value)`
-  
+ 
 ### Description
-  
+ 
 `E = energy(obj,Name,Value)` calculates the classical ground state energy
 per spin. The calculation correctly takes into account the magnetic
 supercell. The function gives correct results on single-k magnetic
 structures even defined on magnetic supercells. For multi-k magnetic
 structures first a definition of a larger supercell is necessary where an
 effective $$k=0$$ representation is possible.
-  
+ 
 ### Examples
-  
+ 
 After optimising the magnetic structure (by minimizing the ground state
 energy), the energy per spin is calculated. This can be compared to
 different ground state structures to decide which is the right classical
@@ -40,20 +40,20 @@ cryst.energy
 Ground state energy: -1.500 meV/spin.
 ```
  
-  
+ 
 ### Input Arguments
-  
+ 
 `obj`
 : [spinw](spinw) object.
-  
+ 
 ### Name-Value Pair Arguments
-  
+ 
 `'epsilon'`
-: The smallest value of incommensurability that is tolerated 
+: The smallest value of incommensurability that is tolerated
   without warning. Default is $$10^{-5}$$.
-  
+ 
 ### Output Arguments
-  
+ 
 `E`
 : Energy per moment (anisotropy + exchange + Zeeman energy).
  
@@ -68,9 +68,9 @@ using `spinw.energy` on incommensurate structures together with single
 ion anisotropy one has to be carefull! In the triangular case one has to
 extend the unit cell to `nExt = [3 3 1]` (in the hexagonal setting), in
 this case the energy will be correct." %}
-  
+ 
 ### See Also
-  
+ 
 [spinw](spinw) \| [spinw.anneal](spinw_anneal) \| [spinw.newcell](spinw_newcell)
  
 

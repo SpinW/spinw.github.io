@@ -4,7 +4,7 @@ title: Installation
 subtitle: How to install SpinW
 ---
 # What you need
-   * recent version of *Matlab* (the code is tested mostly on the latest versions R2013a-R2014a)
+   * recent version of *Matlab* (the code is tested mostly on the latest versions R2015b-R2019a)
    * no extra Matlab toolbox is necessary for numerical calculations
    * for the optional symbolic calculations the *Symbolic Math Toolbox* is necessary
 

@@ -37,7 +37,7 @@ navbar-links:
   Forum: "https://github.com/SpinW/spinw/issues"
   Support: "support"
   F.A.Q: "faq"
-  Pubilcations: "publications"
+  Publications: "publications"
   Presentations: "presentations"
 
 # --- Google custom search config --- #
@@ -92,7 +92,7 @@ social-network-links:
   email: "admin@spinw.org"
   #facebook: false
   github: spinw
-  twitter: spinw4
+  twitter: SpinningDev
 #  reddit: yourname
 #  google-plus: +DeanAttali
 #  linkedin: daattali

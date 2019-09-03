@@ -1,3 +1,8 @@
+---
+layout: page
+title: Ispra2019
+outerURL: "/Ispra2019"
+---
 
 This is the presentation given at the Neutron and Muons for Magnetism 2019 SISN Advanced School in Ispra 2019
 

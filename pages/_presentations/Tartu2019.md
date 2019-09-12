@@ -4,7 +4,6 @@ title: Tartu2019
 outerURL: "/Tartu2019"
 ---
 
-
 # Tartu 2019
 
 This is the presentation given at the NNSP-SwedNess Neutron School 2019, Tartu.

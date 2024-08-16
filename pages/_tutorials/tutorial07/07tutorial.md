@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Tutorial 7
+title: Tutorial 07
 subtitle: k=0 Kagome antiferromagnet
 ---
 

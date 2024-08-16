@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Tutorial 8
+title: Tutorial 08
 subtitle: sqrt(3) x sqrt(3) Kagome antiferromagnet
 ---
 

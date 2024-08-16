@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Tutorial 2
+title: Tutorial 02
 subtitle: Antiferromagnetic nearest-neighbour spin chain
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Tutorial 5
+title: Tutorial 05
 subtitle: Ferromagnetic first neighbor Kagome lattice
 ---
 

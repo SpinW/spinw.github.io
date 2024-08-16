@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Tutorial 3
+title: Tutorial 03
 subtitle: Frustrated J1-J2 AFM chain
 ---
 

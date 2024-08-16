@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Tutorial 4
+title: Tutorial 04
 subtitle: Antiferromagnetic square lattice
 ---
 

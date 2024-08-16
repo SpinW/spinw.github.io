@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Tutorial 9
+title: Tutorial 09
 subtitle: k=0 Kagome antiferromagnet with DM interaction
 ---
 

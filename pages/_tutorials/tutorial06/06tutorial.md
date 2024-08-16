@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Tutorial 6
+title: Tutorial 06
 subtitle: Ferromagnetic kagome lattice
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Tutorial 1
+title: Tutorial 01
 subtitle: Spin wave spectrum of the Heisenberg ferromagnetic nearest-neighbor spin chain
 ---
 

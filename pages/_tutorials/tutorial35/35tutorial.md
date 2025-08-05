@@ -85,7 +85,17 @@ Warning: Convergence is not reached!
 Warning: Convergence is not reached! 
 Warning: Convergence is not reached! 
 Warning: Convergence is not reached! 
-</pre><img vspace="5" hspace="5" src="/tutorial35_05.png" alt=""> <h2 id="7">Check the calculated spin wave spectrum</h2><p>After fitting, the best result is stored in the spinw object. The data includes 2 straight lines in reciprocal space: (0,1,L) and (0,1+K,3+K). We tile the two scans together onto the same plot using a bit of Matlab coding.</p><pre class="codeinput">Q1 = [0 1.0 2.0];
+</pre><img vspace="5" hspace="5" src="/tutorial35_05.png" alt=""><p>
+Note that because of the way that the fitted figure is plotted, if you resize it the experiment points will not be correctly positioned. To work around this, you can either set the figure size before plotting:
+</p><pre class="codeinput">
+figure; set(gcf,'Position',[0 0 1000 500]);
+fitStr = luvo.fitspec(par_fit);
+</pre><p>
+Or after the figure is plotted, to fix its aspect ratio:
+</p><pre class="codeinput">
+set(gca, 'PlotBoxAspectRatioMode', 'manual');
+</pre>
+<h2 id="7">Check the calculated spin wave spectrum</h2><p>After fitting, the best result is stored in the spinw object. The data includes 2 straight lines in reciprocal space: (0,1,L) and (0,1+K,3+K). We tile the two scans together onto the same plot using a bit of Matlab coding.</p><pre class="codeinput">Q1 = [0 1.0 2.0];
 Q2 = [0 1.0 3.0];
 Q3 = [0 1.5 3.5];
 

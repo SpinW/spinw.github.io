@@ -26,21 +26,24 @@ navbar-links:
   News: "news"
   SpinW:
     - Installation: "installation"
-    - SpinW Class: "SWclass"
-    - Class Properties: "SWproperties"
-    - Class Methods: "spinw"
-    - SpinW Files: "swfiles"
-    - SpinW Plot: "swplot"
-    - SpinW Pref: "swpref"
-    - SpinW Sym: "swsym"
+    - Tutorials: "tutorials"
+    - Reference:
+      - SpinW Class: "SWclass"
+      - Class Properties: "SWproperties"
+      - Class Methods: "spinw"
+      - SpinW Files: "swfiles"
+      - SpinW Plot: "swplot"
+      - SpinW Pref: "swpref"
+      - SpinW Sym: "swsym"
+    - Issues: "https://github.com/SpinW/spinw/issues"
   pySpinW:
     - Installation: "installation-python"
-  Tutorials: "tutorials"
-  Forum: "https://github.com/SpinW/spinw/issues"
-  Support: "support"
-  F.A.Q: "faq"
-  Publications: "publications"
-  Presentations: "presentations"
+    - Issues: "https://github.com/SpinW/pySpinW/issues"
+  Resources:
+    - F.A.Q: "faq"
+    - Publications: "publications"
+    - Presentations: "presentations"
+  Contact: "support"
 
 # --- Google custom search config --- #
 # search page name search -> /seach.md

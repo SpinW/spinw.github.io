@@ -24,7 +24,7 @@ description: "Official site of SpinW"
 # List of links in the navigation bar
 navbar-links:
   News: "news"
-  Documentation:
+  SpinW:
     - Installation: "installation"
     - SpinW Class: "SWclass"
     - Class Properties: "SWproperties"
@@ -33,6 +33,8 @@ navbar-links:
     - SpinW Plot: "swplot"
     - SpinW Pref: "swpref"
     - SpinW Sym: "swsym"
+  pySpinW:
+    - Installation: "installation-python"
   Tutorials: "tutorials"
   Forum: "https://github.com/SpinW/spinw/issues"
   Support: "support"

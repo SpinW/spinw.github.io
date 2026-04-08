@@ -8,11 +8,7 @@ use_math: true
 pySpinW is capable of calculating magnon dispersion curves, optimising magnetic structures, visualising systems, and predicting the results of inelastic scattering experiments. 
 In general, we solve a system with a Hamiltonian of the form:
 
-$\mathbf{H} =\sum_{i,j}\mathbf{S}_i$
-
-$J_{ij}$
-
-$\mathbf{S}_j +$
+$\mathbf{H}=\sum_{i,j}\mathbf{S}_iJ_{ij}\mathbf{S}_j+$
 
 $\sum_{i}$
 

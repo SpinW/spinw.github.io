@@ -2,6 +2,7 @@
 layout: page
 title: pySpinW
 subtitle: Overview
+use_math: true
 ---
 
 pySpinW is capable of calculating magnon dispersion curves, optimising magnetic structures, visualising systems, and predicting the results of inelastic scattering experiments. 

@@ -38,11 +38,13 @@ navbar-links:
   pySpinW Docs:
     - Installation: "installation-python"
     - Tutorials: "tutorials-python"
-    - Issues: "https://github.com/SpinW/pySpinW/issues"
   Resources:
     - F.A.Q: "faq"
     - Publications: "publications"
     - Presentations: "presentations"
+  Report Issue:
+    SpinW: "https://github.com/SpinW/spinw/issues"
+    pySpinW: "https://github.com/SpinW/pySpinW/issues"
   Contact: "support"
 
 # --- Google custom search config --- #

@@ -24,16 +24,26 @@ The user facing classes are for defining the system, there are also a number of 
   * Supercell definitions:
     * `PropagationVector` and `CommensuratePropagationVector`
     * `SupercellTransform` for use with the `TransformationSupercell`
-    * Various `Supercell` subclasses
+    * `Supercell` subclasses:
+      * `TiledSupercell`
+      * `SummationSupercell`
+      * `TransformationSupercell`
+      * `RotationSupercell`
+  
 
 
 ## Helper Functions
-  * `spacegroup`
-
+  * `spacegroup` - takes a string describing a spacegroup and returns a `Spacegroup` object. This function is capable of dealing with many different ways of writing the spacegroup, including though an partial operator list.
+  * `generate_*` functions
+    * `generate_sites` automatically creates a list of sites
+    * `generate_exchanges` automatically creates a list of exchanges
+  * `view` Graphically show a Hamiltonian
 
 ## Indirectly Created Classes
 
-  * Spacegroup
+  * `Spacegroup` - these contain details
+  * `HamiltonianParameterization`
+  * `PowderParameterization`
 
 # Detailed listing
 
@@ -41,7 +51,7 @@ The user facing classes are for defining the system, there are also a number of 
 
 ## `UnitCell`
 
-## 
+## `Spacegroup`
 
 ## Supercell Classes
 

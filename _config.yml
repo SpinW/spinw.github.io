@@ -24,20 +24,20 @@ description: "Official site of SpinW"
 # List of links in the navigation bar
 navbar-links:
   News: "news"
-  SpinW:
+  SpinW Docs:
     - Installation: "installation"
     - Tutorials: "tutorials"
-    - Reference:
-      - SpinW Class: "SWclass"
-      - Class Properties: "SWproperties"
-      - Class Methods: "spinw"
-      - SpinW Files: "swfiles"
-      - SpinW Plot: "swplot"
-      - SpinW Pref: "swpref"
-      - SpinW Sym: "swsym"
     - Issues: "https://github.com/SpinW/spinw/issues"
-  pySpinW:
+    - SpinW Class: "SWclass"
+    - Class Properties: "SWproperties"
+    - Class Methods: "spinw"
+    - SpinW Files: "swfiles"
+    - SpinW Plot: "swplot"
+    - SpinW Pref: "swpref"
+    - SpinW Sym: "swsym"
+  pySpinW Docs:
     - Installation: "installation-python"
+    - Tutorials: "tutorials-python"
     - Issues: "https://github.com/SpinW/pySpinW/issues"
   Resources:
     - F.A.Q: "faq"

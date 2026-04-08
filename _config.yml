@@ -39,6 +39,7 @@ navbar-links:
     - Installation: "installation-python"
     - Tutorials: "tutorials-python"
     - Overview: "pyspinw"
+    - Core Classes: "core-classes"
   Resources:
     - F.A.Q: "faq"
     - Publications: "publications"

@@ -38,6 +38,7 @@ navbar-links:
   pySpinW Docs:
     - Installation: "installation-python"
     - Tutorials: "tutorials-python"
+    - Overview: "pyspinw"
   Resources:
     - F.A.Q: "faq"
     - Publications: "publications"

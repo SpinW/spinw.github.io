@@ -33,11 +33,15 @@ The user facing classes are for defining the system, there are also a number of 
 
 ## Indirectly Created Classes
 
+  * Spacegroup
+
 # Detailed listing
 
 ## `LatticeSite`
 
 ## `UnitCell`
+
+## 
 
 ## Supercell Classes
 

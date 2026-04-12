@@ -1,6 +1,6 @@
 ---
 layout: page
-title: pySpinW Overview
+title: Overview
 use_math: true
 ---
 

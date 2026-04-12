@@ -3,11 +3,11 @@ layout: page
 use_math: true
 ---
 
-<div class="row text-center">
+<!--<div class="row text-center">
     <img src="{{ site.title-img }}" alt="SpinW Logo" style="width:65% !important" />
-</div>
+</div>-->
 
-*SpinW* is a MATLAB library that can plot and numerically simulate magnetic structures and excitations of given spin Hamiltonian using classical Monte Carlo simulation and linear spin wave theory.
+*SpinW* and *pySpinW* are libraries that can plot and numerically simulate magnetic structures and excitations of given spin Hamiltonian using classical Monte Carlo simulation and linear spin wave theory. SpinW and pySpinW are written for MATLAB and Python respectively.
 
 <h1 class="text-center">The Projects</h1>
 
@@ -20,8 +20,9 @@ use_math: true
       {%- assign gh-project = "SpinW" -%}
       <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" class="project-link" title="Go to Github Poject Page">
         <span class="fa-stack fa-4x">
-          <i class="fas fa-square fa-stack-2x stack-color"></i>
-          <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+          <!--<i class="fas fa-square fa-stack-2x stack-color"></i>
+          <i class="fas fa-code fa-stack-1x fa-inverse"></i>-->
+          <img src="/img/spinw3_logo.png" width="150" alt="spinW for MATLAB"/>
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">

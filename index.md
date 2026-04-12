@@ -1,4 +1,5 @@
 ---
+title: "SpinW"
 layout: page
 use_math: true
 ---

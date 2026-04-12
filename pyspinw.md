@@ -1,16 +1,20 @@
 ---
 layout: page
-title: pySpinW
-subtitle: Overview
+title: pySpinW Overview
 use_math: true
 ---
+
+<div class="row text-center">
+    <img src="pyspinw_logo.png" alt="SpinW Hamiltonian" />
+</div>
+
 
 pySpinW is capable of calculating magnon dispersion curves, optimising magnetic structures, visualising systems, and predicting the results of inelastic scattering experiments. 
 In general, we solve a system with a Hamiltonian of the form:
 
-{% raw %}
-$\mathcal{H}=\sum_{i,j} \mathbf{S}_i J_{ij}\mathbf{S}_j + \sum_{i} \mathbf{S}_i A_i \mathbf{S}_i + \mathbf{B} \sum_{i} \mathbf{g}_i\mathbf{S}_i $
-{% endraw %}
+<div class="row text-center">
+    <img src="hamiltonian.png" alt="SpinW Hamiltonian" />
+</div>
 
 where $S_i$ are spin vector operators, $J_{ij}$ are 3x3 matrices describing pair coupling between spins, $A_{ij}$ are 3x3 anisotropy matrices, $B$ is external magnetic field and $g_i$ is the g-tensor.
 
@@ -67,9 +71,8 @@ The user facing classes are for defining the system, there are also a number of 
     * `text_summary` and `print_summary` for getting information in text form
     * `expanded` Converts a supercell structure into single large cell
     * `ground_state` returns a new Hamiltonian with an minimal energy ground state
-    * `parameterized` constructs a function (callable) of
-    specifed coupling/anisotropy parameters
-  * Sample definitions, these are used to define the macroscoptic structure
+    * `parameterized` constructs a function (callable) of specified coupling/anisotropy parameters
+  * Sample definitions, these are used to define the macroscopic structure
     * `Twin` is used to represent twinned systems
     * `Powder` is used to represent powder samples, and provides some methods for fitting
   * Supercell definitions:

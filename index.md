@@ -37,8 +37,9 @@ use_math: true
       {%- assign gh-project = "pySpinW" -%}
       <a target="_blank" href="https://github.com/{{- gh-user -}}/{{- gh-project -}}" class="project-link" title="Go to Github Poject Page">
         <span class="fa-stack fa-4x">
-          <i class="fas fa-square fa-stack-2x stack-color"></i>
-          <i class="fab fa-python fa-stack-1x fa-inverse"></i>
+          <!--<i class="fas fa-square fa-stack-2x stack-color"></i>
+          <i class="fab fa-python fa-stack-1x fa-inverse"></i>-->
+          <img src="/img/pyspinw_logo.png" width="150" alt="pySpinW"/>
         </span>
         <h4>{{- gh-project -}}</h4>
         <hr class="seperator">

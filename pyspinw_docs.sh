@@ -51,7 +51,7 @@ then
 
     # Get ready to build
     echo "Building"
-    python -m pdoc pyspinw --no-show-source -o ../docs
+    python -m pdoc pyspinw --no-show-source --favicon /img/spinw3_logo_square.png --logo /pyspinw_logo.png -o ../docs
 
     cp ../docs/pyspinw.html ../../pythonapi.html
 

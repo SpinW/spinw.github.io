@@ -5,7 +5,7 @@ use_math: true
 ---
 
 <div class="row text-center">
-    <img src="pyspinw_logo.png" alt="SpinW Hamiltonian" />
+    <img src="/img/pyspinw_logo.png" alt="SpinW Hamiltonian" />
 </div>
 
 
@@ -13,7 +13,7 @@ pySpinW is capable of calculating magnon dispersion curves, optimising magnetic 
 In general, we solve a system with a Hamiltonian of the form:
 
 <div class="row text-center">
-    <img src="hamiltonian.png" alt="SpinW Hamiltonian" />
+    <img src="/img/hamiltonian.png" alt="SpinW Hamiltonian" />
 </div>
 
 where $S_i$ are spin vector operators, $J_{ij}$ are 3x3 matrices describing pair coupling between spins, $A_{ij}$ are 3x3 anisotropy matrices, $B$ is external magnetic field and $g_i$ is the g-tensor.

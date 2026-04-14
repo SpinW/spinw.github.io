@@ -11,7 +11,7 @@ subtitle: How to install pySpinW
 We recommend that you use a virtual environment, for details of how to do this see below. 
 pySpinW is available through pip, so to install you simply type:
 
-```pip install pyspinw```
+```pip install spinw-python```
 
 # Updating
 
@@ -54,6 +54,22 @@ where `VENV_NAME` is a arbitrary name given to you virtual environment (often pe
 ```source VENV_NAME/bin/activate```
 
 
+## Conda
+
+Alternatively, you can install a virtual environment using the `conda` or `mamba` program. First download and install it from [this link](https://github.com/conda-forge/miniforge?tab=readme-ov-file#install), then create a virtual environment called `pyspinw`:
+
+```mamba create -n pyspinw python=3.12```
+
+Then activate this environment and install PySpinW as above:
+
+```mamba activate pyspinw```
+```pip install spinw-python```
+
+## Jupyter
+
+Many of the tutorials use Jupyter notebooks, which can be installed using:
+
+```pip install notebook```
 
 
 <h1 class="text-center">Have fun!</h1>

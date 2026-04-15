@@ -1,8 +1,9 @@
-
 ---
 layout: page
 title: Examples
 ---
+
+Here's some examples of how you can use pySpinW
 
 [Antiferromagnetic chain](./antiferromagnetic_chain.py)
 

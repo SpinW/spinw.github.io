@@ -37,7 +37,7 @@ navbar-links:
     - SpinW Sym: "swsym"
   pySpinW Docs:
     - Installation: "installation-python"
-    - Tutorials: "tutorials-python"
+    - Examples: "examples/pyspinw-examples"
     - Overview: "pyspinw"
     - API: "pythonapi.html"
   Resources:

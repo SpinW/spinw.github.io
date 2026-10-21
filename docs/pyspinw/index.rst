@@ -10,6 +10,7 @@ Documentation for the Python implementation of SpinW.
    installation
    overview
    examples
+   tutorials
 
 .. toctree::
    :maxdepth: 1

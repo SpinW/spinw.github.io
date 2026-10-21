@@ -1,8 +1,14 @@
-﻿pyspinw.exchange
+pyspinw.exchange
 ================
 
 .. automodule:: pyspinw.exchange
 
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      specialise_exchange
    
    .. rubric:: Classes
 

@@ -9,9 +9,9 @@ dependencies = [
     "myst-parser>=4",
     "pydata-sphinx-theme==0.18.0",
     "sphinx>=9.1.0",
-    "spinw-python",
+    "pyspinw",
 ]
 
 [tool.uv.sources]
-spinw-python = { path = "../pySpinW", editable = true }
+pyspinw = { path = "../pySpinW", editable = true }
 

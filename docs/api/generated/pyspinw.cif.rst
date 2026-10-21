@@ -1,4 +1,4 @@
-﻿pyspinw.cif
+pyspinw.cif
 ===========
 
 .. automodule:: pyspinw.cif
@@ -9,5 +9,12 @@
    .. autosummary::
    
       load_cif
+      load_mcif
       parse_float_entry
+   
+   .. rubric:: Exceptions
+
+   .. autosummary::
+   
+      LoadError
    

@@ -1,4 +1,4 @@
-﻿pyspinw.exchangegroup
+pyspinw.exchangegroup
 =====================
 
 .. automodule:: pyspinw.exchangegroup
@@ -14,4 +14,5 @@
       ExchangeGroup
       InDirectionFilter
       InPlaneFilter
+      NoDirectionalityFilter
    

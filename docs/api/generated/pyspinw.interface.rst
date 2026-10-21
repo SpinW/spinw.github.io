@@ -1,4 +1,4 @@
-﻿pyspinw.interface
+pyspinw.interface
 =================
 
 .. automodule:: pyspinw.interface
@@ -15,6 +15,7 @@
       generate_sites
       generate_structure
       helical_supercell
+      load_tb2j
       matrix_anisotropies
       propagation_vectors
       rotation_supercell

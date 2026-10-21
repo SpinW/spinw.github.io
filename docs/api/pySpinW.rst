@@ -60,6 +60,7 @@ Symmetry and I/O
    symmetry
    cif
    serialisation
+   loading
 
 Utilities
 ---------

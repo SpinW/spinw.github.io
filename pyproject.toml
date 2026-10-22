@@ -10,6 +10,16 @@ dependencies = [
     "pydata-sphinx-theme==0.18.0",
     "sphinx>=9.1.0",
     "pyspinw",
+    "ase>=3.26.0",
+    "numpy>=2.0.0",
+    "packaging",
+    "pycifrw",
+    "spglib>=2.7.0",
+    "scipy",
+    "pyopengl>=3.1.10",
+    "PySide6-Essentials",
+    "matplotlib>=3.10.5",
+    "imageio",
 ]
 
 [tool.uv.sources]

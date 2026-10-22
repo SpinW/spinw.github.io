@@ -17,10 +17,12 @@ jobs:
         id: build
         run: |
           # Install xvfb and virtualGL so can create images
+          wget -q -O- https://packagecloud.io/dcommander/virtualgl/gpgkey | gpg --dearmor > VirtualGL.gpg
+          sudo mv VirtualGL.gpg /etc/apt/trusted.gpg.d/
           wget https://raw.githubusercontent.com/VirtualGL/repo/main/VirtualGL.list
           sudo mv VirtualGL.list /etc/apt/sources.list.d/
           sudo apt update
-          sudo apt install libegl1 libxcb-cursor0 xvfb virtualgl
+          sudo apt install libegl1 libxcb-cursor0 xvfb virtualgl libxcb-icccm4 libxcb-keysyms1 libxcb-shape0
           git clone https://github.com/spinw/pySpinW
           cd pySpinW && git checkout docs_update && cd ..
           mv pySpinW ..
@@ -36,9 +38,6 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: docs/_build/html
-      - name: Setup tmate session
-        if: ${{ failure() }}
-        uses: owenthereal/action-upterm@v2
 
   deploy:
     environment:
@@ -54,6 +53,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
-      - name: Setup tmate session
-        if: ${{ failure() }}
-        uses: owenthereal/action-upterm@v2

@@ -16,11 +16,17 @@ jobs:
       - name: Build static files
         id: build
         run: |
+          # Install xvfb and virtualGL so can create images
+          wget https://raw.githubusercontent.com/VirtualGL/repo/main/VirtualGL.list
+          sudo mv VirtualGL.list /etc/apt/sources.list.d/
           sudo apt update
-          sudo apt install libegl1  # Needed for PySide6
+          sudo apt install libegl1 libxcb-cursor0 xvfb virtualgl
           git clone https://github.com/spinw/pySpinW
+          cd pySpinW && git checkout docs_update && cd ..
           mv pySpinW ..
-          uv run python ../pySpinW/tools/generate_tutorial_files.py
+          # Start the Xvfb server
+          Xvfb :0 -screen 0 1024x768x24 +extension GLX +render -noreset >> xsession.log 2>&1 &
+          DISPLAY=:0 vglrun uv run python ../pySpinW/tools/generate_tutorial_files.py
           mv ../pySpinW/examples/tutorials/tutorial_outputs docs/pyspinw/tutorials
           mv docs/pyspinw/tutorials/index.md docs/pyspinw/tutorials.md
           uv run sphinx-build -M clean docs docs/_build

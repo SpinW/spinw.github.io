@@ -32,7 +32,7 @@ jobs:
           path: docs/_build/html
       - name: Setup tmate session
         if: ${{ failure() }}
-        uses: mxschmitt/action-tmate@v3
+        uses: owenthereal/action-upterm@v2
 
   deploy:
     environment:
@@ -50,4 +50,4 @@ jobs:
         uses: actions/deploy-pages@v5
       - name: Setup tmate session
         if: ${{ failure() }}
-        uses: mxschmitt/action-tmate@v3
+        uses: owenthereal/action-upterm@v2

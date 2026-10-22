@@ -22,7 +22,8 @@ jobs:
           wget https://raw.githubusercontent.com/VirtualGL/repo/main/VirtualGL.list
           sudo mv VirtualGL.list /etc/apt/sources.list.d/
           sudo apt update
-          sudo apt install libegl1 libxcb-cursor0 xvfb virtualgl libxcb-icccm4 libxcb-keysyms1 libxcb-shape0
+          sudo apt install libegl1 libxcb-cursor0 xvfb virtualgl libxcb-icccm4 libxcb-keysyms1 libxcb-shape0 libxkbcommon-x11-0
+
           git clone https://github.com/spinw/pySpinW
           cd pySpinW && git checkout docs_update && cd ..
           mv pySpinW ..
@@ -38,9 +39,6 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: docs/_build/html
-      - name: Setup tmate session
-        if: ${{ failure() }}
-        uses: owenthereal/action-upterm@v2
 
   deploy:
     environment:

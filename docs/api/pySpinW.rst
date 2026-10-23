@@ -18,9 +18,8 @@ Sample and structure
    site
    sitemeta
    cell_offsets
-   lattice_analysis
    lattice_distances
-   structures
+   structure
    subsystems
 
 Exchange and Hamiltonian
@@ -61,6 +60,7 @@ Symmetry and I/O
    symmetry
    cif
    serialisation
+   loading
 
 Utilities
 ---------

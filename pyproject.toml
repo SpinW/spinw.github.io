@@ -1,7 +1,7 @@
 [project]
-name = "sphinx-test"
-version = "0.1.0"
-description = "Add your description here"
+name = "spinw-docs"
+version = "1.1.0"
+description = "Spinw.org website and documentation using sphinx"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -9,9 +9,19 @@ dependencies = [
     "myst-parser>=4",
     "pydata-sphinx-theme==0.18.0",
     "sphinx>=9.1.0",
-    "spinw-python",
+    "pyspinw",
+    "ase>=3.26.0",
+    "numpy>=2.0.0",
+    "packaging",
+    "pycifrw",
+    "spglib>=2.7.0",
+    "scipy",
+    "pyopengl>=3.1.10",
+    "PySide6-Essentials",
+    "matplotlib>=3.10.5",
+    "imageio",
 ]
 
 [tool.uv.sources]
-spinw-python = { path = "../pySpinW", editable = true }
+pyspinw = { path = "../pySpinW", editable = true }
 

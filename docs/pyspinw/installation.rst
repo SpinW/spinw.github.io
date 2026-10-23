@@ -16,7 +16,7 @@ pySpinW is available through pip, so to install you simply type:
 
 .. code-block:: console
 
-   pip install spinw-python
+   pip install pyspinw
 
 Updating
 --------
@@ -25,7 +25,7 @@ Updating to the latest pySpinW can be done through pip:
 
 .. code-block:: console
 
-   pip install --upgrade spinw-python
+   pip install --upgrade pyspinw
 
 Setting up a virtual environment
 --------------------------------
@@ -99,7 +99,7 @@ Then activate this environment and install pySpinW as above:
 .. code-block:: console
 
    mamba activate pyspinw
-   pip install spinw-python
+   pip install pyspinw
 
 Jupyter
 ~~~~~~~

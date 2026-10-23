@@ -8,7 +8,7 @@ SpinWcore, managed with `uv`.
 - Python 3.12, dependency management via `uv` (`uv sync`).
 - Source directory: `docs/` · Entry page: `docs/index.rst` · Config file: `docs/conf.py`.
 - Theme: `pydata_sphinx_theme==0.18.0`; Markdown authoring via `myst-parser>=4`.
-- `spinw-python` is configured as an editable local dependency at `../pySpinW`
+- `pyspinw` is configured as an editable local dependency at `../pySpinW`
   (see `pyproject.toml`); the sibling checkout must exist and be importable
   for the API reference page to render.
 - Extensions:

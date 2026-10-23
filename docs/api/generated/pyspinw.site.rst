@@ -1,4 +1,4 @@
-﻿pyspinw.site
+pyspinw.site
 ============
 
 .. automodule:: pyspinw.site
@@ -9,5 +9,5 @@
    .. autosummary::
    
       ImpliedLatticeSite
-      LatticeSite
+      Site
    

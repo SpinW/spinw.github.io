@@ -62,26 +62,6 @@ The Projects
             :alt: pySpinW stars
             :target: https://github.com/spinw/pySpinW/stargazers
 
-   .. container:: project-card
-
-      .. image:: _static/img/spinwcore_logo.svg
-         :alt: SpinWcore logo
-         :class: project-logo
-
-      `SpinWcore <https://github.com/SpinW/SpinWcore>`_
-
-      SpinW core functions written in C++ for speed.
-
-      .. container:: project-badges
-
-         .. image:: https://img.shields.io/github/forks/spinw/SpinWcore.svg?style=social&label=Fork
-            :alt: SpinWcore forks
-            :target: https://github.com/spinw/SpinWcore/network/members
-
-         .. image:: https://img.shields.io/github/stars/spinw/SpinWcore.svg?style=social&label=Stars
-            :alt: SpinWcore stars
-            :target: https://github.com/spinw/SpinWcore/stargazers
-
 Features
 --------
 

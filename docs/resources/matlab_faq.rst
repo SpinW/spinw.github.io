@@ -1,5 +1,5 @@
-F.A.Q.
-======
+Matlab SpinW F.A.Q.
+===================
 
 Those common questions
 

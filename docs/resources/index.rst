@@ -6,7 +6,7 @@ Project resources, references, and contact information.
 .. toctree::
    :maxdepth: 2
 
-   faq
    citing
+   matlab_faq
    presentations
    contact

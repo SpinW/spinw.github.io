@@ -24,6 +24,8 @@ The Projects
 
    .. container:: project-card
 
+      .. anchor_link:: spinw/index.html
+
       .. image:: _static/img/spinw3_logo.png
          :alt: SpinW logo
          :class: project-logo only-light
@@ -47,6 +49,8 @@ The Projects
             :target: https://github.com/spinw/SpinW/stargazers
 
    .. container:: project-card
+
+      .. anchor_link:: pyspinw/index.html
 
       .. image:: _static/img/pyspinw_logo.png
          :alt: pySpinW logo

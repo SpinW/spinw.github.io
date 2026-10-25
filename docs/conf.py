@@ -47,7 +47,7 @@ html_theme_options = {
     "default_mode": "light",
     "logo": {
         "image_light": "_static/img/spinw3_header.png",
-        "image_dark": "_static/img/spinw3_header.png",
+        "image_dark": "_static/img/spinw3_header_dark.png",
         "alt_text": "SpinW documentation",
     },
     "navbar_align": "content",

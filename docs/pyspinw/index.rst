@@ -4,6 +4,12 @@ pySpinW
 .. image:: ../_static/img/pyspinw_logo.png
    :alt: pySpinW logo
    :align: center
+   :class: only-light
+
+.. image:: ../_static/img/pyspinw_logo_dark.png
+   :alt: pySpinW logo
+   :align: center
+   :class: only-dark
 
 pySpinW is the Python implementation of SpinW. It can calculate magnon
 dispersion curves, optimize magnetic structures, visualize systems, and

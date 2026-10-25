@@ -26,7 +26,11 @@ The Projects
 
       .. image:: _static/img/spinw3_logo.png
          :alt: SpinW logo
-         :class: project-logo
+         :class: project-logo only-light
+
+      .. image:: _static/img/spinw3_logo_dark.png
+         :alt: SpinW logo
+         :class: project-logo only-dark
 
       `SpinW <https://github.com/SpinW/spinw>`_
 
@@ -46,7 +50,11 @@ The Projects
 
       .. image:: _static/img/pyspinw_logo.png
          :alt: pySpinW logo
-         :class: project-logo
+         :class: project-logo only-light
+
+      .. image:: _static/img/pyspinw_logo_dark.png
+         :alt: pySpinW logo
+         :class: project-logo only-dark
 
       `pySpinW <https://github.com/SpinW/pySpinW>`_
 

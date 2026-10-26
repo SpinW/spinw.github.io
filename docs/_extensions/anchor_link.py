@@ -12,7 +12,7 @@ from sphinx.util.docutils import SphinxDirective
 class AnchorLinkNode(Element):
     """A custom html anchor tag with link using the anchor-link css class"""
     def html(self):
-        return f'<a href="{self["link"]}"><span class="anchor-link"></span></a>'
+        return f'<a href="{self["link"]}"><span class="anchor-link"></span></a>\n'
 
 
 def write_html(self, node):

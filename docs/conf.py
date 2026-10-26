@@ -23,6 +23,7 @@ extensions = [
     "sphinx.ext.napoleon",
     "myst_parser",
     "anchor_link",
+    "navbar_items_hover",
 ]
 
 myst_enable_extensions = [

@@ -24,9 +24,15 @@ The Projects
 
    .. container:: project-card
 
+      .. anchor_link:: spinw/index.html
+
       .. image:: _static/img/spinw3_logo.png
          :alt: SpinW logo
-         :class: project-logo
+         :class: project-logo only-light
+
+      .. image:: _static/img/spinw3_logo_dark.png
+         :alt: SpinW logo
+         :class: project-logo only-dark
 
       `SpinW <https://github.com/SpinW/spinw>`_
 
@@ -44,9 +50,15 @@ The Projects
 
    .. container:: project-card
 
+      .. anchor_link:: pyspinw/index.html
+
       .. image:: _static/img/pyspinw_logo.png
          :alt: pySpinW logo
-         :class: project-logo
+         :class: project-logo only-light
+
+      .. image:: _static/img/pyspinw_logo_dark.png
+         :alt: pySpinW logo
+         :class: project-logo only-dark
 
       `pySpinW <https://github.com/SpinW/pySpinW>`_
 
@@ -61,26 +73,6 @@ The Projects
          .. image:: https://img.shields.io/github/stars/spinw/pySpinW.svg?style=social&label=Stars
             :alt: pySpinW stars
             :target: https://github.com/spinw/pySpinW/stargazers
-
-   .. container:: project-card
-
-      .. image:: _static/img/spinwcore_logo.svg
-         :alt: SpinWcore logo
-         :class: project-logo
-
-      `SpinWcore <https://github.com/SpinW/SpinWcore>`_
-
-      SpinW core functions written in C++ for speed.
-
-      .. container:: project-badges
-
-         .. image:: https://img.shields.io/github/forks/spinw/SpinWcore.svg?style=social&label=Fork
-            :alt: SpinWcore forks
-            :target: https://github.com/spinw/SpinWcore/network/members
-
-         .. image:: https://img.shields.io/github/stars/spinw/SpinWcore.svg?style=social&label=Stars
-            :alt: SpinWcore stars
-            :target: https://github.com/spinw/SpinWcore/stargazers
 
 Features
 --------

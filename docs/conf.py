@@ -13,6 +13,8 @@ release = "0.0.01"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), '_extensions'))
 
 extensions = [
     "sphinx.ext.autodoc",
@@ -20,6 +22,8 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.napoleon",
     "myst_parser",
+    "anchor_link",
+    "navbar_items_hover",
 ]
 
 myst_enable_extensions = [
@@ -47,7 +51,7 @@ html_theme_options = {
     "default_mode": "light",
     "logo": {
         "image_light": "_static/img/spinw3_header.png",
-        "image_dark": "_static/img/spinw3_header.png",
+        "image_dark": "_static/img/spinw3_header_dark.png",
         "alt_text": "SpinW documentation",
     },
     "navbar_align": "content",
